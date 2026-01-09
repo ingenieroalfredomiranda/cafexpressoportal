@@ -1,0 +1,8 @@
+<body>
+  <header style="position: relative; text-align: center;">
+    <img src="portada.jpg" alt="Portada principal" style="width:100%; height:auto;">
+    <h1 style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+               color: white; font-size: 3em; background-color: rgba(0,0,0,0.5); padding: 20px;">
+      Ludopatía en Culiacán: Una Adicción Silenciosa
+    </h1>
+  </header>
