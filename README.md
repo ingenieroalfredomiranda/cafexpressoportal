@@ -1,137 +1,315 @@
 <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Café Expresso Portal — La Ludopatía en Culiacán</title>
+  <meta name="description" content="Reportaje especial: La ludopatía en Culiacán. Investigación sobre causas, consecuencias y vínculos con lavado de dinero." />
+  <style>
+    :root{
+      --bg:#ffffff; --muted:#6b7280; --accent:#0a57ff; --card:#f8fafc; --border:#e6e9ef;
+      --maxw:1100px; --gap:1rem;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:20}
+    .container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand .logo{width:44px;height:44px;background:#111;border-radius:6px;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;font-weight:600;color:var(--muted)}
+    nav a{color:var(--muted);padding:.5rem;border-radius:6px}
+    nav a:hover{background:var(--card);color:#0b1220}
 
-<title>Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa</title> <style> :root{ --accent:#A61B1B; --blue:#0B3D91; --muted:#4A4A4A; --white:#ffffff; } *{box-sizing:border-box} body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#222;background:#fff;line-height:1.45}
-/* HERO: reducir altura en lugar de mover el contenido principal con márgenes negativos.
-   Esto evita que la información "de abajo" se pierda o se superponga. */
-.hero-article{
-  position:relative;
-  width:100%;
-  height:56vh;           /* altura ligeramente menor para dejar más espacio al contenido */
-  min-height:360px;
-  overflow:hidden;
-  display:block;
-  cursor:pointer;
-  padding-bottom:0;
-  background:#111;
-}
-.hero-img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease;z-index:0}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg, rgba(11,61,145,0.55) 0%, rgba(0,0,0,0.25) 60%);pointer-events:none;z-index:1}
+    main{display:grid;grid-template-columns: 1fr 320px;gap:1.25rem;padding:1.25rem 0}
+    .hero{background:linear-gradient(180deg, rgba(10,87,255,0.06), transparent);padding:1rem;border-radius:8px;border:1px solid var(--border)}
+    .hero img{width:100%;height:300px;object-fit:cover;border-radius:6px}
+    .hero h1{margin:.5rem 0 0;font-size:1.6rem}
+    .hero p{color:var(--muted);margin:.5rem 0 1rem}
 
-/* Ajuste del texto dentro del hero: bajar el texto sin tocar el flujo del main */
-.hero-text{
-  position:absolute;
-  top:26%;               /* controla cuánto baja el texto dentro del hero */
-  left:6%;
-  right:6%;
-  color:var(--white);
-  text-shadow:0 6px 18px rgba(0,0,0,0.55);
-  max-width:58%;
-  z-index:2;
-  overflow:auto;
-  padding-right:8px;
-}
-.hero-title{margin:0 0 12px 0;font-weight:800;line-height:1.02;font-size:clamp(28px,4.6vw,56px);letter-spacing:-0.02em}
-.hero-sub{margin:0;font-weight:500;font-size:clamp(13px,1.6vw,20px);opacity:0.98}
-.hero-credit{position:absolute;right:4%;bottom:3%;font-size:12px;color:rgba(255,255,255,0.95);z-index:3}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+    .card{background:#fff;border:1px solid var(--border);padding:.85rem;border-radius:8px}
+    .card h3{margin:.25rem 0;font-size:1rem}
+    .card p{margin:.5rem 0;color:var(--muted);font-size:.95rem}
 
-/* CONTENIDO PRINCIPAL: quitar márgenes negativos y usar padding para separación segura */
-.container{
-  max-width:1100px;
-  margin:28px auto;
-  padding:0 20px 48px 20px; /* padding-bottom para que el contenido final no quede pegado al borde */
-  margin-top:0;             /* importante: no usar valores negativos aquí */
-}
-.kicker{color:var(--muted);font-weight:600;margin-bottom:8px;display:inline-block;line-height:1}
-.lead{font-size:18px;color:#111;margin:8px 0 20px} /* margen normal: no negativo */
-.meta{color:var(--muted);font-size:13px;margin-bottom:18px}
-h2{font-size:22px;margin:22px 0 12px}
-p{margin:0 0 14px}
-.two-col{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-.sidebar{background:#fafafa;padding:18px;border-radius:8px;border:1px solid #eee}
-.recuadro{background:#fff;border-left:4px solid var(--accent);padding:12px 14px;margin:14px 0;border-radius:4px}
-.pull{font-weight:700;font-size:20px;color:#111;margin:18px 0}
-.small{font-size:13px;color:var(--muted)}
-.toggle-hint{font-size:12px;color:rgba(255,255,255,0.9);margin-top:8px;opacity:0.95}
+    aside{position:relative}
+    .side-card{background:#fff;border:1px solid var(--border);padding:1rem;border-radius:8px;margin-bottom:1rem}
+    .side-card h4{margin:0 0 .5rem;font-size:1rem}
+    .small-list{display:flex;flex-direction:column;gap:.5rem}
+    .small-list a{display:block;color:#0b1220;padding:.35rem 0;border-bottom:1px dashed #eef2f7}
 
-/* Miniaturas y galería */
-.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.thumbs img{width:110px;height:70px;object-fit:cover;border-radius:6px;border:2px solid transparent;cursor:pointer}
-.thumbs img.selected{border-color:var(--accent)}
-.galeria{display:flex;flex-wrap:wrap;margin-top:12px}
-.galeria img{max-width:220px;margin:8px;border-radius:6px;border:1px solid #e6e6e6}
-.msg{padding:10px;border-radius:6px;margin-top:12px}
-.msg.ok{background:#e6ffed;border:1px solid #bff0c9;color:#064d1a}
-.msg.err{background:#ffecec;border:1px solid #ffbdbd;color:#6b0000}
-.diagnostic{font-size:13px;color:var(--muted);margin-top:8px}
+    table{width:100%;border-collapse:collapse;margin-top:.5rem}
+    th,td{padding:.5rem;border:1px solid #eef2f7;text-align:left;font-size:.95rem}
+    th{background:#fbfdff;font-weight:700}
 
-@media (max-width:980px){
-  .two-col{grid-template-columns:1fr}
-  .hero-text{max-width:86%}
-}
-@media (max-width:600px){
-  .hero-article{height:48vh;min-height:320px}
-  .hero-title{font-size:clamp(20px,7.5vw,32px)}
-  .hero-sub{font-size:14px}
-  .hero-text{top:16%} /* en móviles bajar menos para que no tape contenido */
-  .container{margin-top:0;padding-bottom:36px}
-}
-@media (max-width:420px){
-  .hero-text{max-width:92%;max-height:72%}
-  .hero-title{font-size:18px;line-height:1.05}
-  .hero-sub{font-size:13px}
-  .hero-credit{bottom:6%;right:6%;font-size:11px}
-}
-a:focus{outline:3px solid var(--blue);outline-offset:2px}
-</style>
-Portada principal
+    footer{border-top:1px solid var(--border);padding:1rem 0;margin-top:1.5rem;background:#fff}
+    .meta{font-size:.9rem;color:var(--muted)}
 
-<div class="hero-text">
-  <h1 class="hero-title">Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa</h1>
-  <p class="hero-sub"><strong>Investigación especial — Café Expresso Portal | Culiacán, Sinaloa</strong><br><em>La adicción al juego se alimenta de accesibilidad digital, vacíos regulatorios y presuntas redes financieras.</em></p>
-  <div class="toggle-hint" id="toggleHint">Selecciona una miniatura para cambiar la portada</div>
-  <div class="thumbs" id="thumbs" aria-hidden="false"></div>
-  <div id="diagnostic" class="diagnostic" aria-live="polite"></div>
-</div>
-
-<div class="hero-credit">Crédito foto: Investigaciones Café Expresso Portal</div>
-Investigación
-<article>
-  <!-- Párrafo principal: ya no subimos con márgenes negativos para evitar solapamiento -->
-  <p class="lead">“La máquina me decía que la próxima vez recuperaría todo. Perdí la casa, la dignidad y casi la vida.” Ese testimonio, recogido entre exjugadores de Culiacán, resume la progresión que convierte el ocio en urgencia. Esta investigación cruza relatos personales, documentos y datos para mostrar por qué la ludopatía ya no es solo un problema privado sino una crisis pública en Sinaloa.</p>
-
-  <div class="two-col">
-    <div>
-      <h2>Contexto y antecedentes</h2>
-      <p>En la última década la oferta de juego en Sinaloa se multiplicó: salas de juego, minicasinos y plataformas digitales que facilitan apuestas desde el teléfono. La combinación de accesibilidad, falta de controles y redes financieras opacas ha creado un ecosistema donde el riesgo social se amplifica.</p>
-
-      <h2>Galería</h2>
-      <p class="small">Las imágenes encontradas en la carpeta se muestran abajo; si no aparecen, revisa nombres y rutas.</p>
-      <div class="galeria" id="galeria"></div>
-
-      <h2>Lecturas recomendadas</h2>
-      <div class="recuadro">
-        <p class="pull">Vacíos regulatorios y apuestas digitales</p>
-        <p class="small">Un repaso a cómo la normativa no ha seguido el ritmo de la tecnología y qué implica para comunidades vulnerables.</p>
+    /* Galería / Carrusel */
+    .gallery-section{display:grid;gap:1rem;margin-top:1rem}
+    .hero-figure{margin:0}
+    .hero-figure img{width:100%;height:360px;object-fit:cover;border-radius:6px}
+    .carousel{position:relative;overflow:hidden}
+    .carousel-track{display:flex;gap:0.75rem;transition:transform .35s ease}
+    .slide{min-width:260px;flex:0 0 auto;border-radius:6px;overflow:hidden;background:#fff;border:1px solid #eef2f7}
+    .slide img{width:100%;height:160px;object-fit:cover;display:block}
+    .slide figcaption{font-size:.9rem;color:#555;padding:.5rem}
+    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);border:1px solid #e6e9ef;padding:.5rem .6rem;border-radius:6px;cursor:pointer}
+    .carousel-btn.prev{left:.5rem}
+    .carousel-btn.next{right:.5rem}
+    @media (max-width:980px){
+      main{grid-template-columns:1fr; padding:1rem}
+      .hero-figure img{height:220px}
+      .slide{min-width:200px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">CE</div>
+        <div>
+          <div style="font-weight:800">Café Expresso Portal</div>
+          <div style="font-size:.85rem;color:var(--muted)">Investigación · Culiacán, Sinaloa</div>
+        </div>
       </div>
 
-      <h2>Hallazgos principales</h2>
-      <p>Un problema multicausal y en crecimiento. La ludopatía combina factores individuales, sociales y tecnológicos. Estudios sitúan la prevalencia entre 1% y 3% de la población.</p>
-
-      <h2>Si te identificas</h2>
-      <p class="small"><strong>Señales:</strong> priorizar apuestas; mentir sobre tiempo o dinero; pedir prestado; uso compulsivo de tarjetas; aislamiento; cambios de humor; intentos autolesivos.</p>
-      <p class="small"><strong>Qué hacer:</strong> detener depósitos; conservar comprobantes; bloquear tarjetas; buscar ayuda en salud mental o grupos de apoyo; solicitar autexclusión si está disponible.</p>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#">México</a></li>
+          <li><a href="#">Investigación</a></li>
+          <li><a href="#">Sociedad</a></li>
+          <li><a href="#">Economía</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <aside class="sidebar" aria-labelledby="sidebarTitle">
-      <h3 id="sidebarTitle">Datos clave</h3>
-      <p class="small">Prevalencia estimada: 1%–3% de la población; Riesgo de suicidio: hasta 15 veces mayor en personas con ludopatía.</p>
-      <div class="recuadro">
-        <strong>Contacto:</strong>
-        <p class="small">Redacción — Café Expresso Portal</p>
+  <div class="container">
+    <main>
+      <section>
+        <!-- Hero / Artículo principal -->
+        <article class="hero" aria-labelledby="hero-title">
+          <figure class="hero-figure">
+            <!-- REEMPLAZAR_SRC_IMAGEN_HERO: pega aquí la ruta que tu editor asignó a la imagen destacada -->
+            <img src="REEMPLAZAR_SRC_IMAGEN_HERO" alt="Persona frente a un letrero de casino iluminado; simboliza la atracción del juego" />
+            <figcaption style="font-size:.9rem;color:var(--muted);margin-top:.5rem">Crédito foto: Investigaciones Café Expresso Portal</figcaption>
+          </figure>
+
+          <h1 id="hero-title">La Ludopatía en Culiacán: Una Adicción Silenciosa</h1>
+          <p><strong>Investigación especial</strong> — Reportaje que explora causas, consecuencias y vínculos con lavado de dinero en Sinaloa. Por Miguel Alfredo Miranda Félix · Enero 2026</p>
+          <p class="meta">Resumen: La proliferación de casinos, minicasinos y plataformas digitales ha normalizado el juego y aumentado la vulnerabilidad de adolescentes y jóvenes.</p>
+          <p><a href="#reportaje-completo">Leer reportaje completo</a></p>
+        </article>
+
+        <!-- Galería / Carrusel -->
+        <section class="gallery-section" aria-label="Galería de imágenes sobre ludopatía">
+          <div class="card">
+            <h3>Galería: ambientes de juego</h3>
+            <p class="meta">Imágenes que ilustran la presencia de máquinas, minicasinos y señales de riesgo en barrios urbanos.</p>
+          </div>
+
+          <div class="carousel card" aria-roledescription="carrusel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+
+            <div class="carousel-track" role="list">
+              <!-- REEMPLAZAR_SRC_IMAGEN_1 -->
+              <figure class="slide" role="listitem">
+                <img src="REEMPLAZAR_SRC_IMAGEN_1" alt="Máquinas tragamonedas con luces y botones" loading="lazy" />
+                <figcaption>Máquinas y minicasinos en barrios urbanos.</figcaption>
+              </figure>
+
+              <!-- REEMPLAZAR_SRC_IMAGEN_2 -->
+              <figure class="slide" role="listitem">
+                <img src="REEMPLAZAR_SRC_IMAGEN_2" alt="Sala de juego con iluminación tenue y fichas" loading="lazy" />
+                <figcaption>Espacios que pueden servir como fachadas para operaciones financieras irregulares.</figcaption>
+              </figure>
+
+              <!-- REEMPLAZAR_SRC_IMAGEN_3 -->
+              <figure class="slide" role="listitem">
+                <img src="REEMPLAZAR_SRC_IMAGEN_3" alt="Billetes y tarjeta junto a un aviso sobre apuestas clandestinas" loading="lazy" />
+                <figcaption>Apuestas clandestinas y videojuegos con máquinas de ficha.</figcaption>
+              </figure>
+
+              <!-- REEMPLAZAR_SRC_IMAGEN_4 -->
+              <figure class="slide" role="listitem">
+                <img src="REEMPLAZAR_SRC_IMAGEN_4" alt="Persona jugando en una mesa de apuestas; contexto testimonial" loading="lazy" />
+                <figcaption>Testimonio: “La ludopatía es un asesino silencioso…”</figcaption>
+              </figure>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Siguiente">›</button>
+          </div>
+        </section>
+
+        <!-- Rejilla de artículos relacionados -->
+        <div class="grid" aria-label="Artículos relacionados">
+          <article class="card">
+            <h3>Contexto nacional y mundial</h3>
+            <p>La ludopatía afecta entre 1% y 3% de la población en México; la digitalización ha ampliado el acceso y la vulnerabilidad de jóvenes universitarios.</p>
+            <p><a href="#contexto">Leer más</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Factores de riesgo en Culiacán</h3>
+            <p>Familiares, sociales, económicos y psicológicos se combinan para crear un terreno fértil para la adicción.</p>
+            <p><a href="#factores">Leer más</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Delincuencia y lavado de dinero</h3>
+            <p>La UIF ha detectado casinos vinculados con operaciones financieras irregulares; la falta de supervisión facilita el blanqueo.</p>
+            <p><a href="#lavado">Leer más</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Testimonios</h3>
+            <p>Relatos de Jugadores Anónimos y exjugadores muestran el impacto humano: endeudamiento, pérdida de empleo y riesgo vital.</p>
+            <p><a href="#testimonios">Leer más</a></p>
+          </article>
+        </div>
+
+        <!-- Reportaje completo (secciones) -->
+        <article id="reportaje-completo" class="card" style="margin-top:1rem">
+          <h2 style="margin-top:0">Reportaje de Investigación</h2>
+
+          <h3 id="contexto">Contexto mundial y nacional</h3>
+          <p>La ludopatía es un problema global que afecta a millones. En México, la expansión de apuestas en línea y la publicidad masiva han incrementado la exposición de jóvenes y adultos.</p>
+
+          <h3 id="factores">Factores de riesgo</h3>
+          <ul>
+            <li><strong>Familiares</strong>: antecedentes de adicciones y falta de comunicación.</li>
+            <li><strong>Sociales</strong>: presión de grupo y normalización del juego.</li>
+            <li><strong>Económicos</strong>: búsqueda de ingresos rápidos en contextos de precariedad.</li>
+            <li><strong>Psicológicos</strong>: ansiedad, baja autoestima y depresión.</li>
+          </ul>
+
+          <h3 id="testimonios">Testimonios destacados</h3>
+          <blockquote>
+            “La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Alexander, Jugadores Anónimos, Culiacán
+          </blockquote>
+          <p>Otros testimonios muestran procesos de recuperación y estrategias de reinserción social.</p>
+
+          <h3 id="consecuencias">Consecuencias sociales</h3>
+          <p>Desintegración familiar, endeudamiento, pérdida de patrimonio, problemas de salud mental y proliferación de casas de apuestas en barrios populares.</p>
+
+          <h3 id="lavado">Delincuencia y lavado de dinero</h3>
+          <p>Investigaciones y reportes locales señalan que algunos establecimientos funcionan como fachadas para blanquear capitales. La opacidad en permisos y la falta de auditorías facilitan operaciones irregulares.</p>
+
+          <h3 id="complicidad">Complicidad institucional y vacíos legales</h3>
+          <p>Permisos ambiguos, tolerancia local y vacíos regulatorios en plataformas digitales son factores que requieren transparencia y reformas.</p>
+
+          <h3 id="conclusiones">Conclusiones y propuestas</h3>
+          <ol>
+            <li>Campañas de prevención dirigidas a adolescentes y jóvenes.</li>
+            <li>Regulación estricta de casinos y plataformas digitales con auditorías públicas.</li>
+            <li>Programas de rehabilitación accesibles y gratuitos.</li>
+            <li>Transparencia en el otorgamiento de licencias y controles AML robustos.</li>
+          </ol>
+
+          <h3 id="referencias">Referencias</h3>
+          <p class="meta">Viva la Noticia; El Sol de Sinaloa; Ríodoce; Condusef; UNAM; UIF; CIJ Culiacán.</p>
+        </article>
+
+        <section class="card" style="margin-top:1rem">
+          <h3>Datos clave</h3>
+          <table aria-label="Tabla de cifras">
+            <thead>
+              <tr><th>Indicador</th><th>Valor</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Prevalencia estimada en México</td><td>1%–3%</td></tr>
+              <tr><td>Pacientes atendidos en Sinaloa (reportes locales)</td><td>120+</td></tr>
+              <tr><td>Mercado apuestas deportivas</td><td>50 mil millones MXN anuales (estimado)</td></tr>
+              <tr><td>Casinos vinculados detectados por UIF</td><td>13 (a nivel nacional)</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <aside>
+        <div class="side-card" aria-labelledby="sidebar-1">
+          <h4 id="sidebar-1">Recuadro práctico</h4>
+          <div class="small-list">
+            <div><strong>Señales</strong>: priorizar apuestas; mentir; pedir prestado; aislamiento.</div>
+            <div><strong>Qué hacer</strong>: detener depósitos; conservar comprobantes; buscar ayuda profesional.</div>
+            <a href="#conclusiones">Ver propuestas</a>
+          </div>
+        </div>
+
+        <div class="side-card" aria-labelledby="sidebar-2">
+          <h4 id="sidebar-2">Testimonios breves</h4>
+          <div class="small-list">
+            <a href="#testimonios">Alexander — Jugadores Anónimos</a>
+            <a href="#testimonios">Manuel Velázquez — CIJ Culiacán</a>
+            <a href="#testimonios">Historias de recuperación</a>
+          </div>
+        </div>
+
+        <div class="side-card" aria-labelledby="sidebar-3">
+          <h4 id="sidebar-3">Solicitudes de información</h4>
+          <p class="meta">Carpetas de investigación, actas de aseguramiento, historial de permisos y borrador de reforma a la Ley de Juegos y Sorteos (pendiente de publicación).</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">Café Expresso Portal</div>
+          <div class="meta">Investigación a cargo del equipo de Café Expresso Portal · Miguel Alfredo Miranda Félix · Enero 2026</div>
+        </div>
+        <div class="meta">Referencias y documentos solicitados serán publicados cuando estén verificados.</div>
       </div>
-    </aside>
+    </footer>
   </div>
-</article>
+
+  <script>
+    (function(){
+      const track = document.querySelector('.carousel-track');
+      const prev = document.querySelector('.carousel-btn.prev');
+      const next = document.querySelector('.carousel-btn.next');
+      if (!track || !prev || !next) return;
+
+      let index = 0;
+      const slides = Array.from(track.children);
+      function slideWidth() {
+        return slides[0]?.getBoundingClientRect().width || 260;
+      }
+      function maxIndex() {
+        const visible = Math.floor(track.parentElement.clientWidth / slideWidth());
+        return Math.max(0, slides.length - visible);
+      }
+
+      function update() {
+        const w = slideWidth();
+        const gap = 12;
+        const x = -index * (w + gap);
+        track.style.transform = `translateX(${x}px)`;
+      }
+
+      prev.addEventListener('click', () => {
+        index = Math.max(0, index - 1);
+        update();
+      });
+
+      next.addEventListener('click', () => {
+        index = Math.min(maxIndex(), index + 1);
+        update();
+      });
+
+      window.addEventListener('resize', () => {
+        index = Math.min(index, maxIndex());
+        update();
+      });
+    })();
+  </script>
+</body>
+</html>
+
 
 
 
