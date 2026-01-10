@@ -6,17 +6,9 @@
   <title>La ludopatía en Culiacán — Especial</title>
 
   <!-- Google Fonts: Playfair Display (titulares) + Inter (cuerpo) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <style>
-    /*
-      Tipografía y escala pensadas para reproducir el aspecto sobrio y legible
-      de un diario de calidad. Ajustes de imagen pensados para web y para impresión:
-      - Portada: imagen a página completa (full-bleed) en pantalla y en impresión.
-      - Imágenes interiores: tamaños fijos relativos a la columna y a la doble página.
-      - Sidebar: imágenes verticales con ancho fijo.
-    */
-
     :root{
       --max-width:1100px;
       --accent:#c0392b;
@@ -28,7 +20,6 @@
       --gutter:22px;
     }
 
-    /* Reset / base */
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -36,178 +27,82 @@
       background:var(--bg);
       color:var(--text);
       font-family:var(--sans);
-      font-size:16px;
-      line-height:1.6;
+      font-size:18px;
+      line-height:1.65;
+      font-weight:700;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
 
-    .container{
-      max-width:var(--max-width);
-      margin:28px auto;
-      padding:24px;
-    }
+    .container{max-width:var(--max-width);margin:28px auto;padding:24px}
 
-    /* Header / masthead */
     header{border-bottom:1px solid #e9e9e9;padding-bottom:18px;margin-bottom:18px}
-    h1{
-      font-family:var(--serif);
-      font-size:2.25rem; /* ≈36px */
-      line-height:1.05;
-      margin:0 0 6px;
-      font-weight:700;
-      color:var(--text);
-    }
-    .byline{color:var(--muted);font-size:14px;margin-bottom:8px}
-    .deck{
-      font-family:var(--sans);
-      font-size:1.125rem; /* ≈18px */
-      font-weight:600;
-      color:#222;
-      margin:12px 0 14px;
-    }
-    .lead{
-      background:#f7f7f8;
-      padding:14px;
-      border-left:4px solid var(--accent);
-      margin-bottom:18px;
-      font-size:1rem; /* ≈16px */
-      font-weight:500;
-    }
+    h1{font-family:var(--serif);font-size:2.75rem;line-height:1.02;margin:0 0 8px;font-weight:900;color:var(--text)}
+    .byline{color:var(--muted);font-size:16px;margin-bottom:8px;font-weight:700}
+    .deck{font-family:var(--sans);font-size:1.375rem;font-weight:800;color:#222;margin:12px 0 14px}
+    .lead{background:#f7f7f8;padding:16px;border-left:6px solid var(--accent);margin-bottom:18px;font-size:1.125rem;font-weight:800}
 
-    /* Layout */
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:var(--gutter)}
-    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:var(--gutter)}
+    @media (max-width:1000px){ .grid{grid-template-columns:1fr} }
 
     main.article{padding-right:6px}
-    aside.sidebar{
-      background:#fbfbfb;padding:14px;border:1px solid #eee;border-radius:6px;
-      font-size:14px;color:var(--muted);
-    }
+    aside.sidebar{background:#fbfbfb;padding:16px;border:1px solid #eee;border-radius:6px;font-size:16px;color:var(--muted);font-weight:700}
 
-    /* IMAGE SIZING RULES (web) */
-    /* Portada: full-bleed look on screen: wide, tall, with focal crop */
-    .cover-wrap{
-      width:100%;
-      overflow:hidden;
-      border-radius:4px;
-      margin:0 0 14px;
-    }
-    .cover-img{
-      display:block;
-      width:100%;
-      height:60vh;               /* tall, newspaper-like hero */
-      object-fit:cover;          /* crop to focal point */
-      object-position:center;
-      border-radius:4px;
-    }
+    /* COVER: use <picture> with webp/jpg/png fallback */
+    .cover-wrap{width:100%;overflow:hidden;border-radius:4px;margin:0 0 14px;background:#efefef;position:relative}
+    .cover-img{display:block;width:100%;height:62vh;object-fit:cover;object-position:center;border-radius:4px}
+    .img-fallback{display:none;width:100%;height:62vh;border-radius:4px;background:#ddd;color:#444;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.125rem}
 
-    /* Lead / double-page hero for interior (large image) */
-    .lead-hero{
-      width:100%;
-      height:42vh;               /* large interior hero */
-      object-fit:cover;
-      object-position:center;
-      border-radius:4px;
-      margin:12px 0;
-    }
+    .lead-hero{width:100%;height:44vh;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
+    .interior-large{width:100%;height:420px;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
 
-    /* Standard large interior image (single column) */
-    .interior-large{
-      width:100%;
-      height:360px;
-      object-fit:cover;
-      object-position:center;
-      border-radius:4px;
-      margin:12px 0;
-    }
-
-    /* Sidebar images (vertical) */
-    .sidebar img{
-      width:100%;
-      height:auto;
-      border-radius:4px;
-      display:block;
-      margin-bottom:12px;
-    }
-
-    /* Small inline thumbnails */
     .thumb-row{display:flex;gap:10px;margin:12px 0}
-    .thumb-row img{width:calc(33.333% - 6.66px);height:120px;object-fit:cover;border-radius:4px}
+    .thumb-row img{width:calc(33.333% - 6.66px);height:140px;object-fit:cover;border-radius:4px}
 
-    /* Headings inside article */
-    h2{
-      font-family:var(--serif);
-      font-size:1.25rem; /* ≈20px */
-      line-height:1.25;
-      margin:22px 0 8px;
-      font-weight:600;
-    }
-    h3{
-      font-family:var(--sans);
-      font-size:1rem; /* ≈16px */
-      margin:14px 0 6px;
-      font-weight:600;
-    }
+    h2{font-family:var(--serif);font-size:1.5rem;line-height:1.18;margin:22px 0 8px;font-weight:900}
+    h3{font-family:var(--sans);font-size:1.125rem;margin:14px 0 6px;font-weight:800}
 
     p{margin:0 0 1rem}
-    ul{margin:0 0 1rem 1.15rem}
-    li{margin:0.35rem 0}
+    ul{margin:0 0 1rem 1.25rem}
+    li{margin:0.45rem 0}
 
     .kpi{display:flex;gap:12px;margin:12px 0 18px}
-    .kpi div{background:#fafafa;padding:12px;border:1px solid #eee;border-radius:6px;flex:1;text-align:center}
-    .kpi strong{display:block;font-size:20px;color:var(--accent)}
+    .kpi div{background:#fafafa;padding:14px;border:1px solid #eee;border-radius:6px;flex:1;text-align:center}
+    .kpi strong{display:block;font-size:22px;color:var(--accent);font-weight:900}
 
-    .quote{font-style:italic;border-left:3px solid #ddd;padding-left:12px;color:#333;margin:12px 0}
+    .quote{font-style:italic;border-left:4px solid #ddd;padding-left:14px;color:#333;margin:12px 0;font-weight:800}
+    .recuadro{background:#fff8f8;border-left:6px solid var(--accent);padding:14px;margin:12px 0;font-weight:800}
 
-    .recuadro{background:#fff8f8;border-left:4px solid var(--accent);padding:12px;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin:12px 0;font-size:16px}
+    th,td{border:1px solid #e9e9e9;padding:10px;text-align:left}
+    th{background:#fafafa;font-weight:800}
 
-    table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-    th,td{border:1px solid #e9e9e9;padding:8px;text-align:left}
-    th{background:#fafafa}
+    .small{font-size:0.95rem;color:var(--muted);font-weight:700}
+    .credits{font-size:15px;color:var(--muted);margin-top:8px;font-weight:700}
+    footer{border-top:1px solid #e6e6e6;padding-top:14px;margin-top:22px;color:var(--muted);font-size:15px;font-weight:700}
 
-    .small{font-size:0.875rem;color:var(--muted)}
-    .credits{font-size:13px;color:var(--muted);margin-top:8px}
+    /* Fallback visible class */
+    .img-fallback.show{display:flex}
 
-    footer{border-top:1px solid #e6e6e6;padding-top:14px;margin-top:22px;color:var(--muted);font-size:13px}
-
-    /* PRINT STYLES: try to preserve the newspaper feel when printing to PDF/press */
+    /* Print rules */
     @media print {
-      :root { --gutter:10px; }
-      body{background:#fff;color:#000}
+      body{background:#fff;color:#000;font-weight:700}
       .container{max-width:100%;padding:0;margin:0}
-      header{page-break-after:avoid;border-bottom:none;padding:0 6mm 6mm}
-      /* Make the cover image full-bleed on print: use page margins and scale */
       @page { margin:3mm; }
       .cover-wrap{width:100vw;margin:0;overflow:visible}
-      .cover-img{
-        width:100%;
-        height: auto;
-        max-height: 320mm; /* allow tall hero for full-page feel */
-        object-fit:cover;
-      }
-      /* Interior large images: occupy a large portion of the column */
-      .lead-hero, .interior-large{
-        height:auto;
-        max-height:160mm;
-        page-break-inside:avoid;
-      }
-      /* Sidebar becomes a block below article in print */
+      .cover-img{width:100%;height:auto;max-height:320mm;object-fit:cover}
+      .lead-hero,.interior-large{height:auto;max-height:160mm;page-break-inside:avoid}
       .grid{display:block}
       aside.sidebar{border:none;padding:6mm}
-      .thumb-row img{height:60px}
-      /* Hide interactive-only elements */
-      .kpi{display:block}
     }
 
-    /* Responsive adjustments for small screens */
     @media (max-width:900px) {
-      .cover-img{height:44vh}
+      .cover-img{height:46vh}
       .lead-hero{height:34vh}
-      .interior-large{height:220px}
-      .thumb-row img{height:90px}
+      .interior-large{height:260px}
+      .thumb-row img{height:100px}
+      body{font-size:17px}
     }
-
   </style>
 </head>
 <body>
@@ -226,17 +121,31 @@
 
     <div class="grid">
       <main class="article" role="main">
-        <!-- COVER (hero) -->
+        <!-- COVER: picture element tries webp first, then jpg/png -->
         <div class="cover-wrap" aria-hidden="false">
-          <!-- Reemplaza src por la ruta real del archivo portada_apuestas.jpg -->
-          <img class="cover-img" src="portada_apuestas.jpg" alt="Joven sentado frente a una máquina de apuestas en un local de Culiacán.">
+          <picture>
+            <!-- intenta webp -->
+            <source srcset="apuestas.webp" type="image/webp">
+            <!-- luego jpg -->
+            <source srcset="apuestas.jpg" type="image/jpeg">
+            <!-- luego png -->
+            <img class="cover-img" src="apuestas.png" alt="Joven sentado frente a una máquina de apuestas en un local de Culiacán."
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.img-fallback').classList.add('show');">
+          </picture>
+          <div class="img-fallback" aria-hidden="true">Imagen de portada no disponible — apuestas (busque apuestas.webp / apuestas.jpg / apuestas.png)</div>
         </div>
+
         <figcaption class="small" style="margin-bottom:12px">
           <strong>Pie:</strong> Culiacán, 2025. Un joven frente a una maquinaría de apuestas en un local de la colonia X; la accesibilidad y la publicidad normalizan el juego entre adolescentes y adultos jóvenes. <span class="small">Foto: Archivo Café Expresso Portal / [Nombre del fotógrafo]</span>
         </figcaption>
 
-        <!-- Interior lead hero (large image for double-page feel) -->
-        <img class="lead-hero" src="maquinitas_calle_comercial.jpg" alt="Maquinitas y puntos de apuestas en una calle comercial de Culiacán.">
+        <!-- Lead hero (interior) con fallback similar -->
+        <picture>
+          <source srcset="maquinitas_calle_comercial.webp" type="image/webp">
+          <source srcset="maquinitas_calle_comercial.jpg" type="image/jpeg">
+          <img class="lead-hero" src="maquinitas_calle_comercial.png" alt="Maquinitas y puntos de apuestas en una calle comercial de Culiacán."
+               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — maquinitas_calle_comercial</div>');">
+        </picture>
 
         <h2>Contexto y magnitud</h2>
         <p>La digitalización del juego y la expansión de locales físicos han reducido las barreras de acceso al azar. Apuestas deportivas, microtransacciones y aplicaciones móviles permiten apostar desde cualquier lugar; en paralelo, minicasinos y maquinitas proliferan en colonias populares. En México se estima que entre el <strong>1% y el 3%</strong> de la población padece ludopatía; en Culiacán los centros de atención registran un aumento de consultas, especialmente entre adolescentes y jóvenes.</p>
@@ -251,8 +160,12 @@
         <p class="quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Alexander, Jugadores Anónimos Culiacán</p>
         <p>Los testimonios recogidos describen una progresión típica: inicio recreativo, aumento de frecuencia y montos, endeudamiento con créditos rápidos, ocultamiento familiar y deterioro laboral y emocional. Muchos afectados relatan que la adicción se instala con rapidez cuando confluyen factores personales y sociales.</p>
 
-        <!-- Standard interior large image -->
-        <img class="interior-large" src="fachada_minicasino_colonia.jpg" alt="Fachada de un minicasino en una colonia popular de Culiacán.">
+        <picture>
+          <source srcset="fachada_minicasino_colonia.webp" type="image/webp">
+          <source srcset="fachada_minicasino_colonia.jpg" type="image/jpeg">
+          <img class="interior-large" src="fachada_minicasino_colonia.png" alt="Fachada de un minicasino en una colonia popular de Culiacán."
+               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — fachada_minicasino_colonia</div>');">
+        </picture>
 
         <h2>Factores de riesgo y consecuencias sociales</h2>
         <h3>Factores</h3>
@@ -329,18 +242,18 @@
             <tr><th>Nombre original</th><th>Nombre asignado</th><th>Pie de foto breve</th></tr>
           </thead>
           <tbody>
-            <tr><td>apuestas</td><td>portada_apuestas.jpg</td><td>Culiacán, 2025. Un joven frente a una maquinaría de apuestas; la accesibilidad normaliza el juego.</td></tr>
-            <tr><td>imagen2.webp</td><td>fachada_minicasino_colonia.jpg</td><td>Fachada de un minicasino en una colonia popular; vecinos denuncian cercanía con escuelas.</td></tr>
-            <tr><td>imagen3.webp</td><td>maquinitas_calle_comercial.jpg</td><td>Maquinitas y puntos de apuestas en una calle comercial; la presencia cotidiana facilita el acceso.</td></tr>
-            <tr><td>imagen4.webp</td><td>grupo_apoyo_testimonios.jpg</td><td>Grupo de apoyo local donde exjugadores comparten su proceso de recuperación.</td></tr>
-            <tr><td>imagen5</td><td>documentos_inspecciones_actas.jpg</td><td>Documentos y actas relacionados con inspecciones; la prensa exige transparencia.</td></tr>
-            <tr><td>imagen5.webp</td><td>pantalla_app_apuestas.jpg</td><td>Pantalla de teléfono con una app de apuestas deportivas; la digitalización facilita el acceso.</td></tr>
+            <tr><td>apuestas</td><td>apuestas.webp / apuestas.jpg / apuestas.png</td><td>Culiacán, 2025. Un joven frente a una maquinaría de apuestas; la accesibilidad normaliza el juego.</td></tr>
+            <tr><td>imagen2.webp</td><td>fachada_minicasino_colonia.webp / .jpg</td><td>Fachada de un minicasino en una colonia popular; vecinos denuncian cercanía con escuelas.</td></tr>
+            <tr><td>imagen3.webp</td><td>maquinitas_calle_comercial.webp / .jpg</td><td>Maquinitas y puntos de apuestas en una calle comercial; la presencia cotidiana facilita el acceso.</td></tr>
+            <tr><td>imagen4.webp</td><td>grupo_apoyo_testimonios.webp / .jpg</td><td>Grupo de apoyo local donde exjugadores comparten su proceso de recuperación.</td></tr>
+            <tr><td>imagen5</td><td>documentos_inspecciones_actas.webp / .jpg</td><td>Documentos y actas relacionados con inspecciones; la prensa exige transparencia.</td></tr>
+            <tr><td>imagen5.webp</td><td>pantalla_app_apuestas.webp / .jpg</td><td>Pantalla de teléfono con una app de apuestas deportivas; la digitalización facilita el acceso.</td></tr>
           </tbody>
         </table>
 
         <h3>Especificaciones técnicas</h3>
         <ul class="small">
-          <li>Portada (web): hero full-bleed, altura recomendada 60vh; formato JPG/PNG sRGB; ancho mínimo 1600 px para buena calidad en pantallas grandes.</li>
+          <li>Portada (web): hero full-bleed, altura recomendada 60vh; formato preferible WebP o JPG; ancho mínimo 1600 px.</li>
           <li>Portada (impresión): imagen en alta resolución (300 dpi) y formato TIFF/JPG; preparar versión con sangrado 3 mm.</li>
           <li>Imágenes interiores grandes: 1200–1600 px ancho (web); 200–300 dpi (impresión).</li>
           <li>Sidebar / verticals: 900–1100 px alto (web) o 200–250 dpi (impresión).</li>
@@ -350,10 +263,9 @@
 
         <h3>Checklist antes de publicar</h3>
         <ol class="small">
-          <li>Reemplazar [Nombre del fotógrafo] por créditos reales.</li>
-          <li>Verificar permisos de publicación y consentimiento de fuentes.</li>
-          <li>Confirmar resolución y perfiles de color de todas las imágenes.</li>
-          <li>Marcar como presuntas las irregularidades hasta contar con documentos oficiales.</li>
+          <li>Verifica que exista al menos una de estas rutas en la misma carpeta: <code>apuestas.webp</code>, <code>apuestas.jpg</code> o <code>apuestas.png</code>.</li>
+          <li>Si tu archivo tiene otro nombre exacto (por ejemplo <code>apuestas_final.jpg</code>), reemplaza las rutas en los <code>&lt;source&gt;</code> y <code>&lt;img&gt;</code>.</li>
+          <li>Reemplaza <code>[Nombre del fotógrafo]</code> por el crédito real.</li>
         </ol>
       </aside>
     </div>
@@ -365,6 +277,31 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    // Comprueba imágenes tras carga y activa fallback si fallan (por si el onerror no se dispara)
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('picture img, img.cover-img, img.lead-hero, img.interior-large').forEach(function(img){
+        // si la imagen no existe o no cargó
+        if (!img.complete || img.naturalWidth === 0) {
+          // intenta encontrar un .img-fallback en el mismo contenedor
+          var parent = img.parentElement;
+          // si está dentro de <picture>, el fallback está en parentElement.parentElement
+          if (parent && parent.classList.contains('cover-wrap')) {
+            var fallback = parent.querySelector('.img-fallback');
+            if (fallback) { fallback.classList.add('show'); img.style.display = 'none'; }
+          } else {
+            // insertar fallback justo después de la imagen
+            var fallbackDiv = document.createElement('div');
+            fallbackDiv.className = 'img-fallback show';
+            fallbackDiv.textContent = 'Imagen no disponible — ' + (img.getAttribute('src') || 'sin ruta');
+            img.insertAdjacentElement('afterend', fallbackDiv);
+            img.style.display = 'none';
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
