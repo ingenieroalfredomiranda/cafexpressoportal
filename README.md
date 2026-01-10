@@ -271,12 +271,14 @@
           </thead>
           <tbody>
             <tr><td>apuestas.jpg</td><td>Portada principal</td><td>apuestas.jpg</td></tr>
-            <tr><td>image-48.webp</td><td>Imagen secundaria / miniatura</td><td>image-48.webp</td></tr>
-            <tr><td>imagen2.webp.png</td><td>Imagen interior (renombrar recomendado)</td><td>imagen2.webp.png</td></tr>
-            <tr><td>imagen3.webp.jpg</td><td>Imagen interior (renombrar recommended)</td><td>imagen3.webp.jpg</td></tr>
-            <tr><td>imagen31.webp.jpg</td><td>Imagen interior (renombrar recommended)</td><td>imagen31.webp.jpg</td></tr>
-            <tr><td>imagen41.webp.avif</td><td>Imagen interior (renombrar recommended)</td><td>imagen41.webp.avif</td></tr>
-            <tr><td>imagen5.webp.png</td><td>Imagen interior (renombrar recommended)</td><td>imagen5.webp.png</td></tr>
+            EADME.md
+Enhance styles and image handling in README
+            <tr><td>casino2.jpg</td><td>Imagen secundaria / miniatura</td><td>casino2.jpg</td></tr>
+            <tr><td>casino3.webp/td><td>Imagen interior (renombrar recomendado)</td><td>casino3.webp/td></tr>
+            <tr><td>casino4.png</td><td>Imagen interior (renombrar recommended)</td><td>casino4.png</td></tr>
+            <tr><td>casino5.png</td><td>Imagen interior (renombrar recommended)</td><td>casino5.png</td></tr>
+            <tr><td>casino6.jpg</td><td>Imagen interior (renombrar recommended)</td><td>casino6.jpg</td></tr>
+            
           </tbody>
         </table>
 
