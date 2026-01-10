@@ -27,7 +27,8 @@
       background:var(--bg);
       color:var(--text);
       font-family:var(--sans);
-      font-size:18px;
+      /* Base font increased by ~4 points (from 18px to 22px) as requested */
+      font-size:22px;
       line-height:1.65;
       font-weight:700;
       -webkit-font-smoothing:antialiased;
@@ -37,54 +38,86 @@
     .container{max-width:var(--max-width);margin:28px auto;padding:24px}
 
     header{border-bottom:1px solid #e9e9e9;padding-bottom:18px;margin-bottom:18px}
-    h1{font-family:var(--serif);font-size:2.75rem;line-height:1.02;margin:0 0 8px;font-weight:900;color:var(--text)}
-    .byline{color:var(--muted);font-size:16px;margin-bottom:8px;font-weight:700}
-    .deck{font-family:var(--sans);font-size:1.375rem;font-weight:800;color:#222;margin:12px 0 14px}
-    .lead{background:#f7f7f8;padding:16px;border-left:6px solid var(--accent);margin-bottom:18px;font-size:1.125rem;font-weight:800}
+    /* H1 increased by ~4px equivalent via rem scaling (rem now 22px) */
+    h1{
+      font-family:var(--serif);
+      font-size:3rem; /* larger headline (approx 66px at 22px base) */
+      line-height:1.02;
+      margin:0 0 8px;
+      font-weight:900;
+      color:var(--text);
+    }
+    .byline{color:var(--muted);font-size:18px;margin-bottom:8px;font-weight:700}
+    .deck{
+      font-family:var(--sans);
+      font-size:1.625rem; /* increased ~4 points relative to previous scale */
+      font-weight:800;
+      color:#222;
+      margin:12px 0 14px;
+    }
+    /* Main lead (texto principal) made noticeably larger */
+    .lead{
+      background:#f7f7f8;
+      padding:18px;
+      border-left:6px solid var(--accent);
+      margin-bottom:18px;
+      font-size:1.5rem; /* larger lead for main text emphasis */
+      font-weight:800;
+    }
 
     .grid{display:grid;grid-template-columns:1fr 380px;gap:var(--gutter)}
     @media (max-width:1000px){ .grid{grid-template-columns:1fr} }
 
     main.article{padding-right:6px}
-    aside.sidebar{background:#fbfbfb;padding:16px;border:1px solid #eee;border-radius:6px;font-size:16px;color:var(--muted);font-weight:700}
+    aside.sidebar{background:#fbfbfb;padding:16px;border:1px solid #eee;border-radius:6px;font-size:18px;color:var(--muted);font-weight:700}
 
-    /* COVER: use <picture> with webp/jpg/png fallback */
+    /* COVER: use <picture> with provided filenames */
     .cover-wrap{width:100%;overflow:hidden;border-radius:4px;margin:0 0 14px;background:#efefef;position:relative}
-    .cover-img{display:block;width:100%;height:62vh;object-fit:cover;object-position:center;border-radius:4px}
-    .img-fallback{display:none;width:100%;height:62vh;border-radius:4px;background:#ddd;color:#444;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.125rem}
+    .cover-img{display:block;width:100%;height:68vh; /* slightly taller hero */ object-fit:cover;object-position:center;border-radius:4px}
+    .img-fallback{display:none;width:100%;height:68vh;border-radius:4px;background:#ddd;color:#444;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem}
 
-    .lead-hero{width:100%;height:44vh;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
-    .interior-large{width:100%;height:420px;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
+    .lead-hero{width:100%;height:48vh;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
+    .interior-large{width:100%;height:460px;object-fit:cover;object-position:center;border-radius:4px;margin:12px 0}
 
     .thumb-row{display:flex;gap:10px;margin:12px 0}
-    .thumb-row img{width:calc(33.333% - 6.66px);height:140px;object-fit:cover;border-radius:4px}
+    .thumb-row img{width:calc(33.333% - 6.66px);height:160px;object-fit:cover;border-radius:4px}
 
-    h2{font-family:var(--serif);font-size:1.5rem;line-height:1.18;margin:22px 0 8px;font-weight:900}
-    h3{font-family:var(--sans);font-size:1.125rem;margin:14px 0 6px;font-weight:800}
+    h2{
+      font-family:var(--serif);
+      font-size:1.875rem; /* increased section headings */
+      line-height:1.18;
+      margin:22px 0 8px;
+      font-weight:900;
+    }
+    h3{
+      font-family:var(--sans);
+      font-size:1.375rem; /* increased subheadings */
+      margin:14px 0 6px;
+      font-weight:800;
+    }
 
-    p{margin:0 0 1rem}
+    p{margin:0 0 1.15rem; font-weight:700; font-size:1.0625rem} /* body paragraphs slightly larger than base */
     ul{margin:0 0 1rem 1.25rem}
     li{margin:0.45rem 0}
 
     .kpi{display:flex;gap:12px;margin:12px 0 18px}
-    .kpi div{background:#fafafa;padding:14px;border:1px solid #eee;border-radius:6px;flex:1;text-align:center}
-    .kpi strong{display:block;font-size:22px;color:var(--accent);font-weight:900}
+    .kpi div{background:#fafafa;padding:16px;border:1px solid #eee;border-radius:6px;flex:1;text-align:center}
+    .kpi strong{display:block;font-size:24px;color:var(--accent);font-weight:900}
 
-    .quote{font-style:italic;border-left:4px solid #ddd;padding-left:14px;color:#333;margin:12px 0;font-weight:800}
-    .recuadro{background:#fff8f8;border-left:6px solid var(--accent);padding:14px;margin:12px 0;font-weight:800}
+    .quote{font-style:italic;border-left:4px solid #ddd;padding-left:14px;color:#333;margin:12px 0;font-weight:800;font-size:1.125rem}
 
-    table{width:100%;border-collapse:collapse;margin:12px 0;font-size:16px}
-    th,td{border:1px solid #e9e9e9;padding:10px;text-align:left}
+    .recuadro{background:#fff8f8;border-left:6px solid var(--accent);padding:16px;margin:12px 0;font-weight:800;font-size:1.0625rem}
+
+    table{width:100%;border-collapse:collapse;margin:12px 0;font-size:18px}
+    th,td{border:1px solid #e9e9e9;padding:12px;text-align:left}
     th{background:#fafafa;font-weight:800}
 
-    .small{font-size:0.95rem;color:var(--muted);font-weight:700}
-    .credits{font-size:15px;color:var(--muted);margin-top:8px;font-weight:700}
-    footer{border-top:1px solid #e6e6e6;padding-top:14px;margin-top:22px;color:var(--muted);font-size:15px;font-weight:700}
+    .small{font-size:1rem;color:var(--muted);font-weight:700}
+    .credits{font-size:16px;color:var(--muted);margin-top:8px;font-weight:700}
+    footer{border-top:1px solid #e6e6e6;padding-top:14px;margin-top:22px;color:var(--muted);font-size:16px;font-weight:700}
 
-    /* Fallback visible class */
     .img-fallback.show{display:flex}
 
-    /* Print rules */
     @media print {
       body{background:#fff;color:#000;font-weight:700}
       .container{max-width:100%;padding:0;margin:0}
@@ -97,11 +130,11 @@
     }
 
     @media (max-width:900px) {
-      .cover-img{height:46vh}
-      .lead-hero{height:34vh}
-      .interior-large{height:260px}
-      .thumb-row img{height:100px}
-      body{font-size:17px}
+      .cover-img{height:56vh}
+      .lead-hero{height:40vh}
+      .interior-large{height:320px}
+      .thumb-row img{height:120px}
+      body{font-size:20px}
     }
   </style>
 </head>
@@ -121,30 +154,25 @@
 
     <div class="grid">
       <main class="article" role="main">
-        <!-- COVER: picture element tries webp first, then jpg/png -->
+        <!-- COVER: use the exact filenames you uploaded -->
         <div class="cover-wrap" aria-hidden="false">
           <picture>
-            <!-- intenta webp -->
-            <source srcset="apuestas.webp" type="image/webp">
-            <!-- luego jpg -->
             <source srcset="apuestas.jpg" type="image/jpeg">
-            <!-- luego png -->
-            <img class="cover-img" src="apuestas.png" alt="Joven sentado frente a una máquina de apuestas en un local de Culiacán."
+            <img class="cover-img" src="apuestas.jpg" alt="Joven frente a una máquina de apuestas en Culiacán"
                  onerror="this.style.display='none'; this.parentElement.querySelector('.img-fallback').classList.add('show');">
           </picture>
-          <div class="img-fallback" aria-hidden="true">Imagen de portada no disponible — apuestas (busque apuestas.webp / apuestas.jpg / apuestas.png)</div>
+          <div class="img-fallback" aria-hidden="true">Imagen de portada no disponible — apuestas.jpg</div>
         </div>
 
         <figcaption class="small" style="margin-bottom:12px">
           <strong>Pie:</strong> Culiacán, 2025. Un joven frente a una maquinaría de apuestas en un local de la colonia X; la accesibilidad y la publicidad normalizan el juego entre adolescentes y adultos jóvenes. <span class="small">Foto: Archivo Café Expresso Portal / [Nombre del fotógrafo]</span>
         </figcaption>
 
-        <!-- Lead hero (interior) con fallback similar -->
+        <!-- Lead hero using the uploaded file names -->
         <picture>
-          <source srcset="maquinitas_calle_comercial.webp" type="image/webp">
-          <source srcset="maquinitas_calle_comercial.jpg" type="image/jpeg">
-          <img class="lead-hero" src="maquinitas_calle_comercial.png" alt="Maquinitas y puntos de apuestas en una calle comercial de Culiacán."
-               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — maquinitas_calle_comercial</div>');">
+          <source srcset="image-48.webp" type="image/webp">
+          <img class="lead-hero" src="image-48.webp" alt="Imagen secundaria" 
+               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — image-48.webp</div>');">
         </picture>
 
         <h2>Contexto y magnitud</h2>
@@ -160,11 +188,11 @@
         <p class="quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Alexander, Jugadores Anónimos Culiacán</p>
         <p>Los testimonios recogidos describen una progresión típica: inicio recreativo, aumento de frecuencia y montos, endeudamiento con créditos rápidos, ocultamiento familiar y deterioro laboral y emocional. Muchos afectados relatan que la adicción se instala con rapidez cuando confluyen factores personales y sociales.</p>
 
+        <!-- Use the exact uploaded filenames (double-extension names included as provided) -->
         <picture>
-          <source srcset="fachada_minicasino_colonia.webp" type="image/webp">
-          <source srcset="fachada_minicasino_colonia.jpg" type="image/jpeg">
-          <img class="interior-large" src="fachada_minicasino_colonia.png" alt="Fachada de un minicasino en una colonia popular de Culiacán."
-               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — fachada_minicasino_colonia</div>');">
+          <source srcset="imagen2.webp.png" type="image/png">
+          <img class="interior-large" src="imagen2.webp.png" alt="Imagen 2"
+               onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=&quot;img-fallback show&quot;>Imagen no disponible — imagen2.webp.png</div>');">
         </picture>
 
         <h2>Factores de riesgo y consecuencias sociales</h2>
@@ -239,33 +267,31 @@
 
         <table>
           <thead>
-            <tr><th>Nombre original</th><th>Nombre asignado</th><th>Pie de foto breve</th></tr>
+            <tr><th>Nombre en repo</th><th>Uso sugerido</th><th>Ruta exacta</th></tr>
           </thead>
           <tbody>
-            <tr><td>apuestas</td><td>apuestas.webp / apuestas.jpg / apuestas.png</td><td>Culiacán, 2025. Un joven frente a una maquinaría de apuestas; la accesibilidad normaliza el juego.</td></tr>
-            <tr><td>imagen2.webp</td><td>fachada_minicasino_colonia.webp / .jpg</td><td>Fachada de un minicasino en una colonia popular; vecinos denuncian cercanía con escuelas.</td></tr>
-            <tr><td>imagen3.webp</td><td>maquinitas_calle_comercial.webp / .jpg</td><td>Maquinitas y puntos de apuestas en una calle comercial; la presencia cotidiana facilita el acceso.</td></tr>
-            <tr><td>imagen4.webp</td><td>grupo_apoyo_testimonios.webp / .jpg</td><td>Grupo de apoyo local donde exjugadores comparten su proceso de recuperación.</td></tr>
-            <tr><td>imagen5</td><td>documentos_inspecciones_actas.webp / .jpg</td><td>Documentos y actas relacionados con inspecciones; la prensa exige transparencia.</td></tr>
-            <tr><td>imagen5.webp</td><td>pantalla_app_apuestas.webp / .jpg</td><td>Pantalla de teléfono con una app de apuestas deportivas; la digitalización facilita el acceso.</td></tr>
+            <tr><td>apuestas.jpg</td><td>Portada principal</td><td>apuestas.jpg</td></tr>
+            <tr><td>image-48.webp</td><td>Imagen secundaria / miniatura</td><td>image-48.webp</td></tr>
+            <tr><td>imagen2.webp.png</td><td>Imagen interior (renombrar recomendado)</td><td>imagen2.webp.png</td></tr>
+            <tr><td>imagen3.webp.jpg</td><td>Imagen interior (renombrar recommended)</td><td>imagen3.webp.jpg</td></tr>
+            <tr><td>imagen31.webp.jpg</td><td>Imagen interior (renombrar recommended)</td><td>imagen31.webp.jpg</td></tr>
+            <tr><td>imagen41.webp.avif</td><td>Imagen interior (renombrar recommended)</td><td>imagen41.webp.avif</td></tr>
+            <tr><td>imagen5.webp.png</td><td>Imagen interior (renombrar recommended)</td><td>imagen5.webp.png</td></tr>
           </tbody>
         </table>
 
         <h3>Especificaciones técnicas</h3>
         <ul class="small">
-          <li>Portada (web): hero full-bleed, altura recomendada 60vh; formato preferible WebP o JPG; ancho mínimo 1600 px.</li>
-          <li>Portada (impresión): imagen en alta resolución (300 dpi) y formato TIFF/JPG; preparar versión con sangrado 3 mm.</li>
-          <li>Imágenes interiores grandes: 1200–1600 px ancho (web); 200–300 dpi (impresión).</li>
-          <li>Sidebar / verticals: 900–1100 px alto (web) o 200–250 dpi (impresión).</li>
-          <li>Accesibilidad: incluir atributo alt y descripciones largas en la ficha de la imagen.</li>
-          <li>Protección de identidades: difuminar rostros si las fuentes lo solicitan.</li>
+          <li>Verifica que los archivos existan con exactamente esos nombres en la misma carpeta que este HTML.</li>
+          <li>Si renombraste archivos, actualiza las rutas en el HTML para que coincidan exactamente (mayúsculas/minúsculas incluidas).</li>
+          <li>Para mejor compatibilidad, considera renombrar los archivos con doble extensión a una sola extensión real (por ejemplo, imagen2.png).</li>
         </ul>
 
         <h3>Checklist antes de publicar</h3>
         <ol class="small">
-          <li>Verifica que exista al menos una de estas rutas en la misma carpeta: <code>apuestas.webp</code>, <code>apuestas.jpg</code> o <code>apuestas.png</code>.</li>
-          <li>Si tu archivo tiene otro nombre exacto (por ejemplo <code>apuestas_final.jpg</code>), reemplaza las rutas en los <code>&lt;source&gt;</code> y <code>&lt;img&gt;</code>.</li>
-          <li>Reemplaza <code>[Nombre del fotógrafo]</code> por el crédito real.</li>
+          <li>Confirma que <code>apuestas.jpg</code> esté presente y accesible.</li>
+          <li>Si alguna imagen no carga, revisa la consola del navegador (F12 → Network) para ver errores 404 y ajustar nombres.</li>
+          <li>Reemplaza <code>[Nombre del fotógrafo]</code> por el crédito real antes de publicar.</li>
         </ol>
       </aside>
     </div>
@@ -279,23 +305,21 @@
   </div>
 
   <script>
-    // Comprueba imágenes tras carga y activa fallback si fallan (por si el onerror no se dispara)
+    // Comprueba imágenes tras carga y activa fallback si fallan
     document.addEventListener('DOMContentLoaded', function(){
-      document.querySelectorAll('picture img, img.cover-img, img.lead-hero, img.interior-large').forEach(function(img){
-        // si la imagen no existe o no cargó
+      document.querySelectorAll('img').forEach(function(img){
         if (!img.complete || img.naturalWidth === 0) {
-          // intenta encontrar un .img-fallback en el mismo contenedor
           var parent = img.parentElement;
-          // si está dentro de <picture>, el fallback está en parentElement.parentElement
-          if (parent && parent.classList.contains('cover-wrap')) {
-            var fallback = parent.querySelector('.img-fallback');
-            if (fallback) { fallback.classList.add('show'); img.style.display = 'none'; }
+          var container = parent.closest('.cover-wrap') || parent;
+          var fallback = container.querySelector('.img-fallback');
+          if (fallback) {
+            fallback.classList.add('show');
+            img.style.display = 'none';
           } else {
-            // insertar fallback justo después de la imagen
-            var fallbackDiv = document.createElement('div');
-            fallbackDiv.className = 'img-fallback show';
-            fallbackDiv.textContent = 'Imagen no disponible — ' + (img.getAttribute('src') || 'sin ruta');
-            img.insertAdjacentElement('afterend', fallbackDiv);
+            var fb = document.createElement('div');
+            fb.className = 'img-fallback show';
+            fb.textContent = 'Imagen no disponible — ' + (img.getAttribute('src') || 'sin ruta');
+            img.insertAdjacentElement('afterend', fb);
             img.style.display = 'none';
           }
         }
@@ -304,9 +328,6 @@
   </script>
 </body>
 </html>
-
-
-
 
 
 
