@@ -1,44 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa</title>
-  <meta name="description" content="Investigación especial — Café Expresso Portal. La adicción al juego se alimenta de accesibilidad digital, vacíos regulatorios y presuntas redes financieras en Culiacán." />
+
+  <!-- Metadatos Open Graph para redes sociales -->
   <meta property="og:title" content="Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa" />
   <meta property="og:description" content="Investigación especial — Café Expresso Portal. La adicción al juego se alimenta de accesibilidad digital, vacíos regulatorios y presuntas redes financieras en Culiacán." />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="IMAGE_SRC" />
+  <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" />
   <meta property="og:site_name" content="Café Expresso Portal" />
+
+  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
   <style>
-    :root{
-      --accent:#A61B1B;
-      --blue:#0B3D91;
-      --muted:#4A4A4A;
-      --white:#ffffff;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#222;background:#fff;line-height:1.45}
-    .hero-article{position:relative;width:100%;height:62vh;min-height:420px;overflow:hidden;display:block}
-    .hero-img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg, rgba(11,61,145,0.55) 0%, rgba(0,0,0,0.25) 60%);pointer-events:none}
-    .hero-text{position:absolute;top:6%;left:6%;right:6%;color:var(--white);text-shadow:0 6px 18px rgba(0,0,0,0.55);max-width:58%}
-    .hero-title{margin:0 0 12px 0;font-weight:800;line-height:1.02;font-size:clamp(28px,4.6vw,56px);letter-spacing:-0.02em}
+    body{margin:0;font-family:'Inter',sans-serif;background:#fff;color:#222}
+    .hero-article{position:relative;height:60vh;min-height:380px;overflow:hidden}
+    .hero-img{width:100%;height:100%;object-fit:cover}
+    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45)}
+    .hero-text{position:absolute;top:12%;left:8%;right:8%;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.6)}
+    .hero-title{margin:0;font-weight:800;font-size:clamp(24px,5vw,42px)}
     .hero-sub{margin:0;font-weight:500;font-size:clamp(13px,1.6vw,20px);opacity:0.98}
     .hero-credit{position:absolute;right:4%;bottom:3%;font-size:12px;color:rgba(255,255,255,0.95);text-shadow:0 2px 6px rgba(0,0,0,0.6)}
     .container{max-width:1100px;margin:28px auto;padding:0 20px}
-    .kicker{color:var(--muted);font-weight:600;margin-bottom:8px}
+    .kicker{color:#666;font-weight:600;margin-bottom:8px}
     .lead{font-size:18px;color:#111;margin:12px 0 20px}
-    .meta{color:var(--muted);font-size:13px;margin-bottom:18px}
+    .meta{color:#666;font-size:13px;margin-bottom:18px}
     h2{font-size:22px;margin:22px 0 12px}
     p{margin:0 0 14px}
     .two-col{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
     .sidebar{background:#fafafa;padding:18px;border-radius:8px;border:1px solid #eee}
-    .recuadro{background:#fff;border-left:4px solid var(--accent);padding:12px 14px;margin:14px 0;border-radius:4px}
+    .recuadro{background:#fff;border-left:4px solid #0077cc;padding:12px 14px;margin:14px 0;border-radius:4px}
     .pull{font-weight:700;font-size:20px;color:#111;margin:18px 0}
-    .small{font-size:13px;color:var(--muted)}
+    .small{font-size:13px;color:#666}
     @media (max-width:980px){
       .two-col{grid-template-columns:1fr}
       .hero-text{max-width:86%}
@@ -50,12 +47,12 @@
       .hero-text{top:8%;left:6%;right:6%}
       .hero-credit{left:6%;right:auto;bottom:6%}
     }
-    a:focus{outline:3px solid var(--blue);outline-offset:2px}
+    a:focus{outline:3px solid #0077cc;outline-offset:2px}
   </style>
 </head>
 <body>
   <header class="hero-article" role="img" aria-label="Portada de investigación: fachada de casino iluminada en Culiacán con silueta humana en primer plano.">
-    <img src="IMAGE_SRC" alt="Fachada de casino iluminada en Culiacán con neón; silueta de una persona en primer plano y reflejos en pavimento húmedo" class="hero-img" />
+    <img src="apuestas.jpg" alt="Fachada de casino iluminada en Culiacán con neón; silueta de una persona en primer plano y reflejos en pavimento húmedo" class="hero-img" />
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="hero-text">
@@ -97,36 +94,4 @@
           <p><strong>Para la prensa:</strong> exigir documentos oficiales, mapear oferta de juego y proteger fuentes vulnerables.</p>
 
           <h2>Conclusión</h2>
-          <p>La ludopatía en México y en Culiacán es un fenómeno multicausal que exige políticas públicas integrales, regulación estricta, transparencia en permisos y recursos reales para prevención y tratamiento.</p>
-
-          <p class="small">Café Expresso Portal mantiene la investigación abierta. Si tienes testimonios, documentos o datos, envíalos por el canal seguro de la redacción.</p>
-        </div>
-
-        <aside class="sidebar" aria-labelledby="sidebar-title">
-          <h3 id="sidebar-title">Datos clave</h3>
-          <p><strong>Prevalencia estimada:</strong> 1%–3% de la población (estudios nacionales).</p>
-          <p><strong>Riesgo de suicidio:</strong> la OMS advierte aumento de riesgo hasta 15 veces en personas con ludopatía.</p>
-          <div class="recuadro">
-            <strong>Si te identificas</strong>
-            <p class="small">Señales: priorizar apuestas; mentir sobre tiempo o dinero; pedir prestado; uso compulsivo de tarjetas; aislamiento; cambios de humor; intentos autolesivos.</p>
-            <p class="small">Qué hacer: detener depósitos; conservar comprobantes; bloquear tarjetas; buscar ayuda en salud mental o grupos de apoyo; solicitar autoexclusión si está disponible.</p>
-          </div>
-
-          <h4>Preguntas enviadas</h4>
-          <ul class="small">
-            <li>¿Qué mecanismos de verificación de edad aplican?</li>
-            <li>¿Ofrecen programas de autoexclusión?</li>
-            <li>¿Qué auditorías AML han recibido?</li>
-            <li>¿Qué acciones proponen para financiar atención?</li>
-          </ul>
-
-          <h4>Referencias</h4>
-          <p class="small">OMS, IMSS, SciELO México, BBC Mundo, reportes locales y solicitudes de transparencia.</p>
-        </aside>
-      </div>
-    </article>
-  </main>
-</body>
-</html>
-# cafexpressoportal
-sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)
+          <p>La ludopatía en México y en Culiacán es un fenómeno multicausal que exige políticas públicas integrales
