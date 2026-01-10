@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa</title>
-  <meta name="description" content="Investigación especial — Café Expresso Portal. La adicción al juego se alimenta de accesibilidad digital, vacíos regulatorios y presuntas redes financieras en Culiacán." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -14,21 +13,50 @@
       --white:#ffffff;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#222;background:#fff;line-height:1.45}
-    /* HERO */
-    .hero-article{position:relative;width:100%;height:62vh;min-height:420px;overflow:hidden;display:block;cursor:pointer;padding-bottom:18px}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#222;background:#fff;line-height:1.45}
+
+    /* HERO: reducir altura en lugar de mover el contenido principal con márgenes negativos.
+       Esto evita que la información "de abajo" se pierda o se superponga. */
+    .hero-article{
+      position:relative;
+      width:100%;
+      height:56vh;           /* altura ligeramente menor para dejar más espacio al contenido */
+      min-height:360px;
+      overflow:hidden;
+      display:block;
+      cursor:pointer;
+      padding-bottom:0;
+      background:#111;
+    }
     .hero-img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease;z-index:0}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg, rgba(11,61,145,0.55) 0%, rgba(0,0,0,0.25) 60%);pointer-events:none;z-index:1}
-    /* Texto del hero desplazado hacia abajo ~3-4 renglones */
-    .hero-text{position:absolute;top:24%;left:6%;right:6%;color:var(--white);text-shadow:0 6px 18px rgba(0,0,0,0.55);max-width:58%;z-index:2;max-height:70%;overflow:auto;padding-right:8px}
-    .hero-title{margin:0 0 12px 0;font-weight:800;line-height:1.02;font-size:clamp(28px,4.6vw,56px);letter-spacing:-0.02em;word-break:break-word;overflow-wrap:break-word}
-    .hero-sub{margin:0;font-weight:500;font-size:clamp(13px,1.6vw,20px);opacity:0.98;word-break:break-word;overflow-wrap:break-word}
-    .hero-credit{position:absolute;right:4%;bottom:3%;font-size:12px;color:rgba(255,255,255,0.95);text-shadow:0 2px 6px rgba(0,0,0,0.6);z-index:3}
 
-    /* Contenido principal */
-    .container{max-width:1100px;margin:28px auto;padding:0 20px; margin-top:-40px;} /* sube todo el bloque principal */
-    .kicker{color:var(--muted);font-weight:600;margin-bottom:8px;margin-top:-18px;display:inline-block;line-height:1} /* pega "Investigación" con el renglón superior */
-    .lead{font-size:18px;color:#111;margin:12px 0 20px;margin-top:-24px} /* sube el párrafo principal para eliminar hueco */
+    /* Ajuste del texto dentro del hero: bajar el texto sin tocar el flujo del main */
+    .hero-text{
+      position:absolute;
+      top:26%;               /* controla cuánto baja el texto dentro del hero */
+      left:6%;
+      right:6%;
+      color:var(--white);
+      text-shadow:0 6px 18px rgba(0,0,0,0.55);
+      max-width:58%;
+      z-index:2;
+      overflow:auto;
+      padding-right:8px;
+    }
+    .hero-title{margin:0 0 12px 0;font-weight:800;line-height:1.02;font-size:clamp(28px,4.6vw,56px);letter-spacing:-0.02em}
+    .hero-sub{margin:0;font-weight:500;font-size:clamp(13px,1.6vw,20px);opacity:0.98}
+    .hero-credit{position:absolute;right:4%;bottom:3%;font-size:12px;color:rgba(255,255,255,0.95);z-index:3}
+
+    /* CONTENIDO PRINCIPAL: quitar márgenes negativos y usar padding para separación segura */
+    .container{
+      max-width:1100px;
+      margin:28px auto;
+      padding:0 20px 48px 20px; /* padding-bottom para que el contenido final no quede pegado al borde */
+      margin-top:0;             /* importante: no usar valores negativos aquí */
+    }
+    .kicker{color:var(--muted);font-weight:600;margin-bottom:8px;display:inline-block;line-height:1}
+    .lead{font-size:18px;color:#111;margin:8px 0 20px} /* margen normal: no negativo */
     .meta{color:var(--muted);font-size:13px;margin-bottom:18px}
     h2{font-size:22px;margin:22px 0 12px}
     p{margin:0 0 14px}
@@ -48,7 +76,7 @@
     .msg{padding:10px;border-radius:6px;margin-top:12px}
     .msg.ok{background:#e6ffed;border:1px solid #bff0c9;color:#064d1a}
     .msg.err{background:#ffecec;border:1px solid #ffbdbd;color:#6b0000}
-    button{cursor:pointer}
+    .diagnostic{font-size:13px;color:var(--muted);margin-top:8px}
 
     @media (max-width:980px){
       .two-col{grid-template-columns:1fr}
@@ -58,12 +86,8 @@
       .hero-article{height:48vh;min-height:320px}
       .hero-title{font-size:clamp(20px,7.5vw,32px)}
       .hero-sub{font-size:14px}
-      /* en móviles se reduce el desplazamiento para que el texto no quede demasiado abajo */
-      .hero-text{top:16%;left:6%;right:6%}
-      .hero-credit{left:6%;right:auto;bottom:6%}
-      .container{margin-top:-18px}
-      .lead{margin-top:-12px}
-      .kicker{margin-top:-8px}
+      .hero-text{top:16%} /* en móviles bajar menos para que no tape contenido */
+      .container{margin-top:0;padding-bottom:36px}
     }
     @media (max-width:420px){
       .hero-text{max-width:92%;max-height:72%}
@@ -84,8 +108,8 @@
       <h1 class="hero-title">Ludopatía y dinero sucio: cómo las máquinas, las apps y la opacidad regulatoria devoran a Sinaloa</h1>
       <p class="hero-sub"><strong>Investigación especial — Café Expresso Portal | Culiacán, Sinaloa</strong><br><em>La adicción al juego se alimenta de accesibilidad digital, vacíos regulatorios y presuntas redes financieras.</em></p>
       <div class="toggle-hint" id="toggleHint">Selecciona una miniatura para cambiar la portada</div>
-
       <div class="thumbs" id="thumbs" aria-hidden="false"></div>
+      <div id="diagnostic" class="diagnostic" aria-live="polite"></div>
     </div>
 
     <div class="hero-credit">Crédito foto: Investigaciones Café Expresso Portal</div>
@@ -95,6 +119,7 @@
     <div class="kicker">Investigación</div>
 
     <article>
+      <!-- Párrafo principal: ya no subimos con márgenes negativos para evitar solapamiento -->
       <p class="lead">“La máquina me decía que la próxima vez recuperaría todo. Perdí la casa, la dignidad y casi la vida.” Ese testimonio, recogido entre exjugadores de Culiacán, resume la progresión que convierte el ocio en urgencia. Esta investigación cruza relatos personales, documentos y datos para mostrar por qué la ludopatía ya no es solo un problema privado sino una crisis pública en Sinaloa.</p>
 
       <div class="two-col">
@@ -102,16 +127,22 @@
           <h2>Contexto y antecedentes</h2>
           <p>En la última década la oferta de juego en Sinaloa se multiplicó: salas de juego, minicasinos y plataformas digitales que facilitan apuestas desde el teléfono. La combinación de accesibilidad, falta de controles y redes financieras opacas ha creado un ecosistema donde el riesgo social se amplifica.</p>
 
-          <h2>Galería y subida de imágenes</h2>
-          <p class="small">Puedes subir imágenes relacionadas con la investigación. Las imágenes se guardan en el servidor y se muestran en la galería.</p>
-
-          <form id="uploadForm" class="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-            <input id="fileInput" type="file" name="imagen" accept="image/*" required>
-            <button type="submit">Subir</button>
-          </form>
-
-          <div id="mensaje" aria-live="polite"></div>
+          <h2>Galería</h2>
+          <p class="small">Las imágenes encontradas en la carpeta se muestran abajo; si no aparecen, revisa nombres y rutas.</p>
           <div class="galeria" id="galeria"></div>
+
+          <h2>Lecturas recomendadas</h2>
+          <div class="recuadro">
+            <p class="pull">Vacíos regulatorios y apuestas digitales</p>
+            <p class="small">Un repaso a cómo la normativa no ha seguido el ritmo de la tecnología y qué implica para comunidades vulnerables.</p>
+          </div>
+
+          <h2>Hallazgos principales</h2>
+          <p>Un problema multicausal y en crecimiento. La ludopatía combina factores individuales, sociales y tecnológicos. Estudios sitúan la prevalencia entre 1% y 3% de la población.</p>
+
+          <h2>Si te identificas</h2>
+          <p class="small"><strong>Señales:</strong> priorizar apuestas; mentir sobre tiempo o dinero; pedir prestado; uso compulsivo de tarjetas; aislamiento; cambios de humor; intentos autolesivos.</p>
+          <p class="small"><strong>Qué hacer:</strong> detener depósitos; conservar comprobantes; bloquear tarjetas; buscar ayuda en salud mental o grupos de apoyo; solicitar autexclusión si está disponible.</p>
         </div>
 
         <aside class="sidebar" aria-labelledby="sidebarTitle">
@@ -127,90 +158,106 @@
   </main>
 
   <script>
-    // Lista final de imágenes solicitada (sin "image48")
-    const imageFiles = [
-      'imagen2.webp',
-      'imagen3.webp',
-      'imagen4.webp',
-      'imagen5.webp',
-      'imagen31.webp',
-      'imagen41.webp'
-    ];
+    /* Robust image loader:
+       - prueba varias extensiones para cada base de nombre
+       - usa la primera encontrada como portada
+       - no modifica el flujo del documento (no hay márgenes negativos)
+       - muestra diagnóstico en la página y en consola
+    */
+    const imageBases = ['imagen2','imagen3','imagen4','imagen5','imagen31','imagen41'];
+    const exts = ['.webp','.avif','.jpg','.jpeg','.png'];
+    const PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+    const diagEl = document.getElementById('diagnostic');
 
-    (function initGallery() {
+    function logConsole(msg){ console.log('[PORTADA] ' + msg); if (diagEl) diagEl.textContent = msg; }
+
+    function testImage(url, timeout = 3000){
+      return new Promise(resolve => {
+        const img = new Image();
+        let done = false;
+        const timer = setTimeout(() => { if (!done){ done = true; resolve(false); img.src = ''; } }, timeout);
+        img.onload = () => { if (!done){ done = true; clearTimeout(timer); resolve(true); } };
+        img.onerror = () => { if (!done){ done = true; clearTimeout(timer); resolve(false); } };
+        img.src = url;
+      });
+    }
+
+    async function resolvePaths(bases, extensions){
+      const results = [];
+      for (const base of bases){
+        let found = null;
+        for (const ext of extensions){
+          const candidate = base + ext;
+          try {
+            const ok = await testImage(candidate);
+            if (ok){ found = candidate; logConsole('Encontrada: ' + candidate); break; }
+            else logConsole('No encontrada: ' + candidate);
+          } catch(e){
+            logConsole('Error probando ' + candidate + ': ' + e);
+          }
+        }
+        results.push(found);
+      }
+      return results;
+    }
+
+    async function init(){
+      diagEl && (diagEl.textContent = 'Buscando imágenes en la carpeta...');
+      const resolved = await resolvePaths(imageBases, exts);
       const heroImg = document.getElementById('heroImg');
       const thumbs = document.getElementById('thumbs');
       const gal = document.getElementById('galeria');
 
-      if (!imageFiles.length) {
-        thumbs.innerHTML = '<div class="small">No hay miniaturas configuradas.</div>';
-        heroImg.src = '';
-        return;
+      thumbs.innerHTML = '';
+      gal.innerHTML = '';
+
+      const firstValid = resolved.find(p => p);
+      if (firstValid){
+        heroImg.src = firstValid;
+        heroImg.onerror = () => { heroImg.src = PLACEHOLDER; logConsole('Error cargando portada: ' + firstValid); };
+        logConsole('Portada establecida: ' + firstValid);
+      } else {
+        heroImg.src = PLACEHOLDER;
+        logConsole('No se encontraron imágenes válidas. Revisa nombres y rutas.');
       }
 
-      // Establecer la primera imagen como portada inicial
-      heroImg.src = imageFiles[0];
-
-      // Crear miniaturas y poblar galería
-      imageFiles.forEach((name, idx) => {
-        // miniatura
-        const t = document.createElement('img');
-        t.src = name;
-        t.alt = 'Miniatura ' + (idx + 1);
-        t.dataset.src = name;
-        if (idx === 0) t.classList.add('selected');
-        t.addEventListener('click', () => {
-          thumbs.querySelectorAll('img').forEach(x => x.classList.remove('selected'));
-          t.classList.add('selected');
-          heroImg.src = t.dataset.src;
+      resolved.forEach((path, idx) => {
+        const thumb = document.createElement('img');
+        thumb.alt = 'Miniatura ' + (idx + 1);
+        thumb.src = path || PLACEHOLDER;
+        thumb.dataset.src = path || '';
+        thumb.addEventListener('click', () => {
+          if (thumb.dataset.src){
+            heroImg.src = thumb.dataset.src;
+            thumbs.querySelectorAll('img').forEach(x => x.classList.remove('selected'));
+            thumb.classList.add('selected');
+            logConsole('Portada cambiada: ' + thumb.dataset.src);
+          }
         });
-        thumbs.appendChild(t);
+        if (idx === 0) thumb.classList.add('selected');
+        thumbs.appendChild(thumb);
 
-        // galería inferior
         const g = document.createElement('img');
-        g.src = name;
         g.alt = 'Galería ' + (idx + 1);
+        g.src = path || PLACEHOLDER;
         gal.appendChild(g);
       });
-    })();
 
-    // Subida AJAX con fallback
-    (function() {
-      const form = document.getElementById('uploadForm');
-      const fileInput = document.getElementById('fileInput');
-      const mensaje = document.getElementById('mensaje');
-      const gal = document.getElementById('galeria');
+      // resumen en consola
+      logConsole('Resumen de imágenes:');
+      resolved.forEach((p,i) => logConsole(imageBases[i] + ' -> ' + (p || 'NO ENCONTRADA')));
+    }
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        mensaje.innerHTML = '';
-        const file = fileInput.files[0];
-        if (!file) return;
-        const fd = new FormData();
-        fd.append('imagen', file);
-
-        try {
-          const res = await fetch('/upload-ajax', { method: 'POST', body: fd });
-          if (!res.ok) {
-            if (res.status === 404) { form.removeEventListener('submit', arguments.callee); form.submit(); return; }
-            const err = await res.json().catch(()=>({ error: 'Error al subir' }));
-            throw new Error(err.error || 'Error al subir');
-          }
-          const json = await res.json();
-          if (!json.filename) throw new Error('Respuesta inválida del servidor');
-          const img = document.createElement('img');
-          img.src = '/uploads/' + encodeURIComponent(json.filename);
-          gal.prepend(img);
-          mensaje.innerHTML = '<div class="msg ok">Imagen subida correctamente.</div>';
-          form.reset();
-        } catch (err) {
-          mensaje.innerHTML = '<div class="msg err">' + (err.message || 'Error al subir') + '</div>';
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+      init().catch(err => {
+        console.error('[PORTADA] Error inicializando:', err);
+        diagEl && (diagEl.textContent = 'Error al inicializar la galería. Revisa la consola.');
       });
-    })();
+    });
   </script>
 </body>
 </html>
+
 
 
 
