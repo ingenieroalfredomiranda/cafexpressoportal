@@ -1,103 +1,17 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>La Ludopatía en Culiacán — Investigación</title>
+/* Imagen completa abajo */
+.full-image {
+  width: 100%;
+  position: fixed;   /* fija el bloque */
+  bottom: 0;         /* lo coloca al fondo */
+  left: 0;           /* alineado a la izquierda */
+}
+.full-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#6b6b6b;
-      --accent:#b30000;
-      --serif:"Merriweather", Georgia, "Times New Roman", serif;
-      --sans:"Inter", "Helvetica Neue", Arial, sans-serif;
-      --max-width:1100px;
-    }
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--sans);
-      color:var(--text);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.4;
-    }
-    h1,h2,h3,h4,h5,h6{margin:0 0 8px 0; line-height:1.08}
-    p{margin:0 0 10px 0; color:var(--text); font-size:15.5px}
-    .container{
-      max-width:var(--max-width);
-      margin:24px auto;
-      padding:0 20px;
-    }
-    .masthead{
-      display:flex;
-      align-items:flex-end;
-      gap:16px;
-      border-bottom:1px solid #e6e6e6;
-      padding-bottom:12px;
-      margin-bottom:18px;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:72px;height:72px;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--serif);font-size:18px;letter-spacing:1px}
-    .title{font-family:var(--serif);font-size:18px;color:var(--text)}
-    .subtitle{font-size:11px;color:var(--muted);margin-top:4px}
-    .meta{margin-left:auto;text-align:right;color:var(--muted);font-size:12.5px}
-
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:22px;align-items:start;margin-bottom:22px}
-    .hero-main{background:#fafafa;padding:18px;border-radius:6px;box-shadow:0 6px 18px rgba(15,15,15,0.04)}
-    .kicker{display:inline-block;color:var(--accent);font-weight:700;font-size:12px;text-transform:uppercase;margin-bottom:8px}
-    .headline{font-family:var(--serif);font-size:30px;margin:6px 0 10px 0}
-    .standfirst{color:var(--muted);font-size:15px;margin-bottom:12px}
-    .byline{font-size:12.5px;color:var(--muted);margin-bottom:10px}
-
-    .hero-image{width:100%;height:480px;background:#ddd;border-radius:6px;overflow:hidden;position:relative}
-    .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;transition:transform .45s ease}
-    .hero-image:hover img{transform:scale(1.02)}
-    .hero-caption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.6);color:#fff;padding:10px 12px;font-size:13px;border-radius:4px;max-width:85%}
-
-    .side{display:flex;flex-direction:column;gap:14px}
-    .card{background:#fff;border-radius:6px;padding:12px;box-shadow:0 6px 18px rgba(15,15,15,0.03);border:1px solid #f0f0f0}
-    .card h4{margin:0 0 6px 0;font-size:14px;font-family:var(--serif)}
-    .card p{margin:0;color:var(--muted);font-size:13px}
-
-    .article{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:16px}
-    .article-main{font-size:15.5px;color:var(--text)}
-    .article-main h2{font-family:var(--serif);font-size:20px;margin-top:22px;margin-bottom:8px}
-    .pull-quote{font-family:var(--serif);font-size:18px;color:var(--accent);border-left:4px solid var(--accent);padding:10px 14px;margin:16px 0;background:#fff8f8}
-
-    /* Testimonios y pies */
-    .testimonios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0 22px 0}
-    .testimonio{display:flex;flex-direction:column;align-items:stretch;position:relative}
-    .testimonio a{display:block;position:relative;height:160px;border-radius:6px;overflow:hidden}
-    .testimonio img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;transition:transform .35s ease}
-    .testimonio a:hover img{transform:scale(1.03)}
-    .overlay{position:absolute;left:0;right:0;bottom:0;padding:12px;background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 60%);color:#fff}
-    .thumb-caption{margin-top:8px;font-size:13px;color:var(--muted);padding:0 6px;line-height:1.3}
-    .hook{position:absolute;right:12px;top:12px;background:rgba(255,255,255,0.08);padding:6px 8px;border-radius:4px;font-size:12px;color:#fff;font-weight:600}
-
-    /* Capture ayuda block */
-    .capture-test{margin:0 0 18px 0;border-radius:6px;overflow:hidden;position:relative;max-width:100%}
-    .capture-test img{display:block;width:100%;height:auto;object-fit:cover;object-position:center 40%}
-    .capture-caption{padding:10px 12px;font-size:14px;color:var(--muted);background:transparent}
-    .btn-access-test{display:inline-block;margin-top:8px;background:var(--accent);color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:600;border:0;cursor:pointer}
-    .btn-access-test:focus{outline:3px solid #ffd6d6;outline-offset:3px}
-
-    .sidebar{position:sticky;top:24px;align-self:start;display:flex;flex-direction:column;gap:12px}
-    .sidebar .box{padding:10px;border-radius:6px;background:#fff;border:1px solid #f0f0f0}
-    .sidebar h5{margin:0 0 6px 0;font-family:var(--serif);font-size:14px}
-    .sidebar p{margin:0;color:var(--muted);font-size:13px}
-    .photo-credit{display:block;font-size:12px;color:var(--muted);margin-top:8px}
-    footer{margin-top:28px;padding-top:18px;border-top:1px solid #e6e6e6;color:var(--muted);font-size:13px}
-    :focus{outline:3px solid #ffd6d6;outline-offset:3px}
-
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .hero-image{height:320px}
       .article{grid-template-columns:1fr}
       .testimonios{grid-template-columns:1fr}
       .container{padding:0 16px}
