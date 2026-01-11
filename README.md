@@ -1,63 +1,61 @@
 
-  <div class="site-header" style="padding:12px;background:#fafafa;border-bottom:1px solid #eee">
-    <h1 style="margin:0;font-size:1rem">Portal de investigación</h1>
-  </div>
-</header>
+  <!-- Hero -->
+<section class="hero" aria-labelledby="main-headline">
+  <article class="hero-main">
+    <div class="kicker">Investigación</div>
+    <h1 id="main-headline" class="headline">La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero</h1>
+    <p class="standfirst">Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.</p>
 
-    </header>
+    <div class="byline">Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje</div>
 
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="main-headline">
-      <article class="hero-main">
-        <div class="kicker">Investigación</div>
-        <h1 id="main-headline" class="headline">La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero</h1>
-        <p class="standfirst">Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.</p>
+    <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
+      Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
+    </p>
+  </article>
 
-        <div class="byline">Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje</div>
+  <aside class="side" aria-label="Portada y destacados">
+    <figure class="hero-image">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" alt="Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas" loading="lazy" width="1200" height="800">
+      <figcaption class="hero-caption">Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.</figcaption>
+    </figure>
 
-        <p style="color:var(--muted);font-size:13.5px;margin-top:6px;">
-          Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
-        </p>
-      </article>
+    <div class="card">
+      <h4>Hallazgos clave</h4>
+      <p>La investigación identifica: normalización del juego entre jóvenes; vacíos regulatorios; 13 casinos vinculados a operaciones sospechosas; y testimonios de prostitución y delitos para financiar apuestas.</p>
+    </div>
 
-      <aside class="side" aria-label="Portada y destacados">
-        <figure class="hero-image" role="img" aria-label="Portada principal">
-          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" alt="Portada: Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas" loading="lazy" width="1200" height="800">
-          <figcaption class="hero-caption">Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.</figcaption>
-        </figure>
+    <div class="card">
+      <h4>Cómo ayudar</h4>
+      <p>Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.</p>
+    </div>
+  </aside>
+</section>
 
-        <div class="card">
-          <h4>Hallazgos clave</h4>
-          <p>La investigación identifica: normalización del juego entre jóvenes; vacíos regulatorios; 13 casinos vinculados a operaciones sospechosas; y testimonios de prostitución y delitos para financiar apuestas.</p>
-        </div>
+<!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
+<section aria-label="Captura principal">
+  <figure class="capture-test" aria-labelledby="captureTitle">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg" alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación" loading="lazy" width="1200" height="800">
+    <figcaption id="captureTitle" class="capture-caption">
+      <strong>Cómo ayudar</strong><br>
+      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
+      <br>
+      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
+    </figcaption>
+  </figure>
+</section>
 
-        <div class="card">
-          <h4>Cómo ayudar</h4>
-          <p>Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.</p>
-        </div>
-      </aside>
-    </section>
+<!-- Article body -->
+<main class="article" role="main" id="main-content">
+  <section class="article-main">
+    <h2>Contexto: de entretenimiento a dependencia</h2>
+    <p>La ludopatía, o trastorno por juego, es una adicción sin sustancia que afecta a miles de personas en México. En Culiacán, la proliferación de casinos, minicasinos y plataformas digitales ha facilitado el acceso al juego, especialmente entre adolescentes y jóvenes universitarios.</p>
 
-    <!-- Bloque: imagen de ayuda + enlace para abrir el cuestionario -->
-    <section aria-label="Captura principal">
-      <figure class="capture-test" aria-labelledby="captureTitle">
-        <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg" alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación" loading="lazy" width="1200" height="800">
-        <figcaption id="captureTitle" class="capture-caption">
-          <strong>Cómo ayudar</strong><br>
-          Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
-          <br>
-          <a href="#quizModal" class="btn-access-test" role="button" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</a>
-        </figcaption>
-      </figure>
-    </section>
+    <div class="pull-quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Testimonio recogido en Culiacán</div>
 
-    <!-- Article body -->
-    <main class="article" role="main">
-      <section class="article-main">
-        <h2>Contexto: de entretenimiento a dependencia</h2>
-        <p>La ludopatía, o trastorno por juego, es una adicción sin sustancia que afecta a miles de personas en México. En Culiacán, la proliferación de casinos, minicasinos y plataformas digitales ha facilitado el acceso al juego, especialmente entre adolescentes y jóvenes universitarios.</p>
-
-        <div class="pull-quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Testimonio recogido en Culiacán</div>
+    <h2 id="testimonios">Testimonios que atrapan</h2>
+    <!-- Aquí continúa el contenido de testimonios -->
+  </section>
+</main>
 
         <h2 id="testimonios">Testimonios que atrapan</h2>
 
