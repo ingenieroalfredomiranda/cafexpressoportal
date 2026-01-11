@@ -1,5 +1,9 @@
 
-      </div>
+  <div class="site-header" style="padding:12px;background:#fafafa;border-bottom:1px solid #eee">
+    <h1 style="margin:0;font-size:1rem">Portal de investigación</h1>
+  </div>
+</header>
+
     </header>
 
     <!-- Hero -->
