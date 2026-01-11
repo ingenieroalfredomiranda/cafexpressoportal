@@ -1,39 +1,4 @@
-/* Imagen completa abajo */
-.full-image {
-  width: 100%;
-  position: fixed;   /* fija el bloque */
-  bottom: 0;         /* lo coloca al fondo */
-  left: 0;           /* alineado a la izquierda */
-}
-.full-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-}
 
-      .article{grid-template-columns:1fr}
-      .testimonios{grid-template-columns:1fr}
-      .container{padding:0 16px}
-    }
-
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Masthead -->
-    <header class="masthead" role="banner">
-      <div class="brand" aria-hidden="true">
-        <div class="logo">AP</div>
-        <div>
-          <div class="title">Apuestas</div>
-          <div class="subtitle">Investigación especial — Culiacán</div>
-        </div>
-      </div>
-
-      <div class="meta">
-        <div><strong>Miguel A. Miranda Félix</strong></div>
-        <div>Enero 2026 — Facultad de Filosofía y Letras, UAS</div>
       </div>
     </header>
 
