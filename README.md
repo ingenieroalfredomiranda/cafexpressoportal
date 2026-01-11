@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>La Ludopatía en Culiacán — Investigación</title>
 
-  <!-- Tipografía inspirada en ediciones de prensa de alta calidad -->
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -18,7 +18,6 @@
       --sans:"Inter", "Helvetica Neue", Arial, sans-serif;
       --max-width:1100px;
     }
-
     html,body{height:100%}
     body{
       margin:0;
@@ -29,15 +28,11 @@
       -moz-osx-font-smoothing:grayscale;
       line-height:1.55;
     }
-
-    /* Page container */
     .container{
       max-width:var(--max-width);
       margin:32px auto;
       padding:0 20px;
     }
-
-    /* Header / Masthead */
     .masthead{
       display:flex;
       align-items:flex-end;
@@ -81,8 +76,6 @@
       color:var(--muted);
       font-size:13px;
     }
-
-    /* Hero */
     .hero{
       display:grid;
       grid-template-columns: 1fr 380px;
@@ -122,7 +115,6 @@
       color:var(--muted);
       margin-bottom:14px;
     }
-
     .hero-image{
       width:100%;
       height:360px;
@@ -152,8 +144,6 @@
       max-width:85%;
       font-family:var(--sans);
     }
-
-    /* Side column */
     .side{
       display:flex;
       flex-direction:column;
@@ -168,8 +158,6 @@
     }
     .card h4{margin:0 0 8px 0;font-size:15px;font-family:var(--serif)}
     .card p{margin:0;color:var(--muted);font-size:13px}
-
-    /* Article body */
     .article{
       display:grid;
       grid-template-columns: 1fr 320px;
@@ -187,8 +175,6 @@
       margin-bottom:10px;
     }
     .article-main p{margin:0 0 14px 0; color:var(--text);}
-
-    /* Pull quote */
     .pull-quote{
       font-family:var(--serif);
       font-size:20px;
@@ -198,8 +184,6 @@
       margin:18px 0;
       background:#fff8f8;
     }
-
-    /* Testimonios (enganchadores) */
     .testimonios{
       display:grid;
       grid-template-columns: repeat(3,1fr);
@@ -209,23 +193,40 @@
     .testimonio{
       background:#111;
       color:#fff;
-      padding:16px;
+      padding:0;
       border-radius:6px;
       position:relative;
-      min-height:120px;
+      min-height:160px;
+      overflow:hidden;
       display:flex;
       flex-direction:column;
-      justify-content:center;
+      justify-content:flex-end;
+    }
+    .testimonio a{
+      color:inherit;
+      text-decoration:none;
+      display:block;
+      height:100%;
+      width:100%;
+    }
+    .testimonio .overlay{
+      padding:16px;
+      background:linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.65) 60%);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      height:100%;
     }
     .testimonio .quote{
       font-family:var(--serif);
-      font-size:15px;
-      margin-bottom:10px;
+      font-size:16px;
+      margin-bottom:8px;
+      color:#fff;
     }
     .testimonio .credit{
       font-size:12px;
       color:#ddd;
-      opacity:0.9;
+      opacity:0.95;
     }
     .testimonio .hook{
       position:absolute;
@@ -238,8 +239,15 @@
       color:#fff;
       font-weight:600;
     }
-
-    /* Sidebar */
+    .testimonio img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter:contrast(0.95) saturate(0.9);
+    }
     .sidebar{
       position:sticky;
       top:24px;
@@ -251,16 +259,12 @@
     .sidebar .box{padding:12px;border-radius:6px;background:#fff;border:1px solid #f0f0f0}
     .sidebar h5{margin:0 0 8px 0;font-family:var(--serif);font-size:15px}
     .sidebar p{margin:0;color:var(--muted);font-size:13px}
-
-    /* Photo credit style */
     .photo-credit{
       display:block;
       font-size:12px;
       color:var(--muted);
       margin-top:8px;
     }
-
-    /* Footer */
     footer{
       margin-top:36px;
       padding-top:22px;
@@ -268,8 +272,6 @@
       color:var(--muted);
       font-size:13px;
     }
-
-    /* Responsive */
     @media (max-width:980px){
       .hero{grid-template-columns:1fr; }
       .hero-main{order:2}
@@ -281,12 +283,6 @@
   </style>
 </head>
 <body>
-  <!--
-    INSTRUCCIONES:
-    Reemplaza los tokens de imagen (por ejemplo: REPLACE_PORTADA_IMAGE) por las rutas o URLs de tus imágenes.
-    No modifiques las clases si quieres mantener el estilo editorial.
-  -->
-
   <div class="container">
     <!-- Masthead -->
     <header class="masthead" role="banner">
@@ -320,8 +316,8 @@
 
       <aside class="side" aria-label="Portada y destacados">
         <figure class="hero-image" role="img" aria-label="Portada principal">
-          <!-- Reemplaza REPLACE_PORTADA_IMAGE por la ruta de tu imagen de portada -->
-          <img src="REPLACE_PORTADA_IMAGE" alt="Portada: Apuestas en Culiacán — imagen representativa">
+          <!-- Portada: imagen central 'apuestas' alojada en GitHub Pages -->
+          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" alt="Portada: Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas">
           <figcaption class="hero-caption">Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.</figcaption>
         </figure>
 
@@ -347,62 +343,76 @@
 
         <div class="pull-quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Testimonio recogido en Culiacán</div>
 
-        <h2>Factores de riesgo</h2>
-        <p>Los factores que favorecen la aparición del trastorno por juego en Culiacán son múltiples y se combinan: antecedentes familiares de adicciones, presión de grupo, normalización del juego en espacios públicos y digitales, y problemas psicológicos como ansiedad y depresión.</p>
+        <h2 id="testimonios">Testimonios que atrapan</h2>
 
-        <h2>Testimonios que atrapan</h2>
-
+        <!-- Testimonios con imágenes vinculadas a secciones internas -->
         <div class="testimonios" aria-label="Testimonios destacados">
-          <!-- Testimonio 1 -->
+          <!-- Testimonio 1: Impacto social -->
           <div class="testimonio" role="article" aria-labelledby="t1">
+            <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social">
+              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg" alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas">
+              <div class="overlay">
+                <div class="quote">“Apostadores llegan hasta a prostituirse.”</div>
+                <div class="credit">Publicación local; relato de supervivencia económica</div>
+              </div>
+            </a>
             <div class="hook">Impacto social</div>
-            <div id="t1" class="quote">“Apostadores llegan hasta a prostituirse.”</div>
-            <div class="credit">Publicación local; relato de supervivencia económica</div>
           </div>
 
-          <!-- Testimonio 2 -->
+          <!-- Testimonio 2: Toque humano -->
           <div class="testimonio" role="article" aria-labelledby="t2">
+            <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano">
+              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg" alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón">
+              <div class="overlay">
+                <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
+                <div class="credit">Caso clínico; Los Mochis</div>
+              </div>
+            </a>
             <div class="hook">Toque humano</div>
-            <div id="t2" class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
-            <div class="credit">Caso clínico; Los Mochis</div>
           </div>
 
-          <!-- Testimonio 3 -->
+          <!-- Testimonio 3: Pérdida económica -->
           <div class="testimonio" role="article" aria-labelledby="t3">
+            <a href="#detalle-perdida-economica" title="Abrir testimonio: Pérdida económica">
+              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/perdida_economica_caja.jpg" alt="Caja de mudanza abierta frente a una puerta cerrada; objetos personales dispersos">
+              <div class="overlay">
+                <div class="quote">“He perdido fácil más de dos millones de pesos.”</div>
+                <div class="credit">Testimonio personal; recuperación parcial</div>
+              </div>
+            </a>
             <div class="hook">Pérdida económica</div>
-            <div id="t3" class="quote">“He perdido fácil más de dos millones de pesos.”</div>
-            <div class="credit">Testimonio personal; recuperación parcial</div>
           </div>
         </div>
+
+        <h2 id="detalle-impacto-social">Impacto social — Testimonio ampliado</h2>
+        <p>Relato ampliado: en comunidades con precariedad económica, la presión por obtener recursos rápidos empuja a algunas personas a medidas extremas. Este testimonio documenta cómo la deuda y la estigmatización empujan a la marginalidad y a prácticas de supervivencia que dañan a familias enteras.</p>
+
+        <figure style="margin:18px 0;">
+          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino2.jpg" alt="Interior de un casino o maquinitas en Culiacán" style="width:100%;height:auto;border-radius:6px;display:block;">
+          <figcaption class="photo-credit">Maquinitas en colonias populares; la accesibilidad normaliza el juego. Foto: archivo local</figcaption>
+        </figure>
+
+        <h2 id="detalle-toque-humano">Toque humano — Caso clínico (Los Mochis)</h2>
+        <p>Relato clínico: la progresión desde el juego recreativo hasta el trastorno por juego puede incluir convulsiones por estrés, intentos autolesivos y pérdida de empleo. Este caso muestra la necesidad de protocolos de derivación entre servicios de salud y redes comunitarias.</p>
+
+        <figure style="margin:18px 0;">
+          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino3.webp" alt="Exterior de un minicasino en Culiacán" style="width:100%;height:auto;border-radius:6px;display:block;">
+          <figcaption class="photo-credit">Minicasinos en zonas urbanas; a menudo operan cerca de áreas residenciales. Foto: archivo local</figcaption>
+        </figure>
+
+        <h2 id="detalle-perdida-economica">Pérdida económica — Testimonio ampliado</h2>
+        <p>Relato económico: la pérdida de patrimonio y el endeudamiento masivo son consecuencias frecuentes. En este testimonio, la persona describe el uso de tarjetas, préstamos y la venta de bienes para sostener la conducta adictiva, así como el proceso de recuperación parcial.</p>
+
+        <figure style="margin:18px 0;">
+          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino4.png" alt="Documentos y extractos bancarios sobre una mesa" style="width:100%;height:auto;border-radius:6px;display:block;">
+          <figcaption class="photo-credit">Extractos y documentos que muestran el rastro financiero de la adicción. Foto: archivo local</figcaption>
+        </figure>
 
         <h2>Consecuencias sociales y económicas</h2>
         <p>Las consecuencias son devastadoras: desintegración familiar, endeudamiento, pérdida de patrimonio, delitos para financiar apuestas y riesgos para la salud mental, incluyendo ansiedad, depresión y riesgo de suicidio.</p>
 
-        <figure style="margin:18px 0;">
-          <!-- Reemplaza REPLACE_CASINO_IMAGE_1 por la ruta de tu imagen -->
-          <img src="REPLACE_CASINO_IMAGE_1" alt="Interior de un casino o maquinitas en Culiacán" style="width:100%;height:auto;border-radius:6px;display:block;">
-          <figcaption class="photo-credit">Maquinitas en colonias populares; la accesibilidad normaliza el juego. Foto: archivo local</figcaption>
-        </figure>
-
         <h2>Vínculos con lavado de dinero y complicidad institucional</h2>
         <p>La Unidad de Inteligencia Financiera ha detectado operaciones sospechosas en casinos y plataformas. En Sinaloa, inspecciones y reportes periodísticos señalan la posible utilización de establecimientos de juego como fachadas para blanquear capitales.</p>
-
-        <p>La falta de regulación efectiva y la permisividad en la concesión de licencias alimentan la percepción de complicidad institucional. La prensa local ha documentado casos y operativos que aún están en investigación.</p>
-
-        <h2>Estudios y cifras locales</h2>
-        <p>En estudios aplicando el cuestionario SOGS en universidades mexicanas, casi la mitad de los encuestados reportó haber jugado en los últimos cinco años, y se identificaron grupos en riesgo, especialmente entre 18 y 25 años. En Sinaloa participaron más de 600 estudiantes en muestras que confirman la relevancia local.</p>
-
-        <h2>Historias que no se olvidan</h2>
-        <p>Los relatos personales permiten comprender la progresión clínica: inicio recreativo, aumento de frecuencia y montos, endeudamiento, ocultamiento familiar y deterioro laboral. En casos extremos, las personas recurren a la venta de bienes, prostitución o delitos para sostener la conducta adictiva.</p>
-
-        <figure style="margin:18px 0;">
-          <!-- Reemplaza REPLACE_CASINO_IMAGE_2 por la ruta de tu imagen -->
-          <img src="REPLACE_CASINO_IMAGE_2" alt="Exterior de un minicasino en Culiacán" style="width:100%;height:auto;border-radius:6px;display:block;">
-          <figcaption class="photo-credit">Minicasinos en zonas urbanas; a menudo operan cerca de áreas residenciales. Foto: archivo local</figcaption>
-        </figure>
-
-        <h2>Respuesta institucional y vacíos legales</h2>
-        <p>Si bien existen reformas propuestas a la Ley de Juegos y Sorteos, faltan detalles sobre su alcance y recursos para prevención y tratamiento. Los servicios de salud y grupos de apoyo existen, pero la capacidad es limitada frente a la demanda potencial.</p>
 
         <h2>Recomendaciones y propuestas</h2>
         <ul>
@@ -411,12 +421,6 @@
           <li>Programas de rehabilitación accesibles y gratuitos, con protocolos de derivación entre salud y servicios sociales.</li>
           <li>Transparencia en el otorgamiento de licencias y sanciones claras para operadores irregulares.</li>
         </ul>
-
-        <h2>Metodología</h2>
-        <p>La investigación combinó revisión de reportes locales, entrevistas con afectados y especialistas, solicitudes formales de información y análisis de prensa. Se protegieron identidades de fuentes vulnerables y se presentó como presunta cualquier irregularidad hasta contar con documentos oficiales.</p>
-
-        <h2>Conclusión</h2>
-        <p>La ludopatía en Culiacán es un fenómeno multidimensional que combina salud pública, economía familiar y riesgo de infiltración criminal. La prensa y la academia deben seguir exigiendo documentos y cifras oficiales para medir la magnitud real del daño y presionar por políticas públicas efectivas.</p>
 
         <p style="margin-top:18px;color:var(--muted);font-size:14px;"><strong>Nota del autor:</strong> Las identidades de las personas afectadas han sido protegidas. Las cifras y hallazgos se basan en fuentes locales, institucionales y testimonios periodísticos; se recomienda la verificación documental para uso académico o judicial.</p>
       </section>
@@ -463,31 +467,30 @@
     </footer>
   </div>
 
-  <!-- Script opcional para carga progresiva de imágenes (sustituir tokens por rutas reales) -->
+  <!-- Script ligero para asegurar carga de imágenes remotas y fallback -->
   <script>
     (function(){
-      // Mapa de reemplazo: sustituye los tokens por las rutas de tus imágenes.
-      // Ejemplo de uso: coloca las rutas reales en este objeto.
-      const IMAGES = {
-        "REPLACE_PORTADA_IMAGE": "REPLACE_WITH_YOUR_PORTADA_IMAGE",
-        "REPLACE_CASINO_IMAGE_1": "REPLACE_WITH_YOUR_CASINO_IMAGE_1",
-        "REPLACE_CASINO_IMAGE_2": "REPLACE_WITH_YOUR_CASINO_IMAGE_2"
-      };
+      const fallback = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><rect width="100%" height="100%" fill="#e9e9e9"/><text x="50%" y="50%" font-family="Arial, sans-serif" font-size="20" fill="#777" text-anchor="middle">Imagen pendiente</text></svg>'
+      );
 
-      // Reemplaza los src que contengan tokens por las rutas definidas arriba.
       document.querySelectorAll('img').forEach(img=>{
-        const src = img.getAttribute('src') || "";
-        if(src && src.startsWith("REPLACE_")){
-          const key = src;
-          if(IMAGES[key]){
-            img.src = IMAGES[key];
-          } else {
-            // Si no se ha definido la ruta, deja una imagen neutra (opcional)
-            img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
-              '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><rect width="100%" height="100%" fill="#e9e9e9"/><text x="50%" y="50%" font-family="Arial, sans-serif" font-size="20" fill="#777" text-anchor="middle">Imagen pendiente</text></svg>'
-            );
+        img.addEventListener('error', function(){ this.src = fallback; });
+      });
+
+      // Smooth scroll for anchor links (enhances UX when clicking testimonios)
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', function(e){
+          const targetId = this.getAttribute('href').slice(1);
+          const target = document.getElementById(targetId);
+          if(target){
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+            // add a subtle focus for accessibility
+            target.setAttribute('tabindex','-1');
+            target.focus({preventScroll:true});
           }
-        }
+        });
       });
     })();
   </script>
