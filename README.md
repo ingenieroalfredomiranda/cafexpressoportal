@@ -57,45 +57,46 @@
   </section>
 </main>
 
-        <h2 id="testimonios">Testimonios que atrapan</h2>
+   <h2 id="testimonios">Testimonios que atrapan</h2>
 
-        <div class="testimonios" aria-label="Testimonios destacados">
-          <figure class="testimonio" role="article" aria-labelledby="t1">
-            <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
-              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg" loading="lazy" alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas" width="1200" height="800">
-              <div class="overlay">
-                <div class="quote">“Apostadores llegan hasta a prostituirse.”</div>
-                <div class="credit">Publicación local; relato de supervivencia económica</div>
-              </div>
-            </a>
-            <figcaption class="thumb-caption">
-              <strong>Impacto social:</strong> relatos de supervivencia que muestran la marginalización económica.
-              <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
-            </figcaption>
-            <div class="hook">Impacto social</div>
-          </figure>
+<div class="testimonios" aria-label="Testimonios destacados">
+  <figure class="testimonio" role="article" aria-labelledby="t1">
+    <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg" loading="lazy" alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas" width="1200" height="800">
+      <div class="overlay">
+        <div class="quote">“Apostadores llegan hasta a prostituirse.”</div>
+        <div class="credit">Publicación local; relato de supervivencia económica</div>
+      </div>
+    </a>
+    <figcaption class="thumb-caption">
+      <strong>Impacto social:</strong> relatos de supervivencia que muestran la marginalización económica.
+      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
+    </figcaption>
+    <div class="hook">Impacto social</div>
+  </figure>
 
-          <figure class="testimonio" role="article" aria-labelledby="t2">
-            <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
-              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg" loading="lazy" alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón" width="1200" height="800">
-              <div class="overlay">
-                <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
-                <div class="credit">Caso clínico; Los Mochis</div>
-              </div>
-            </a>
-            <figcaption class="thumb-caption">
-              <strong>Toque humano:</strong> testimonio clínico que muestra la progresión del trastorno.
-              <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
-            </figcaption>
-            <div class="hook">Toque humano</div>
-          </figure>
+  <figure class="testimonio" role="article" aria-labelledby="t2">
+    <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg" loading="lazy" alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón" width="1200" height="800">
+      <div class="overlay">
+        <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
+        <div class="credit">Caso clínico; Los Mochis</div>
+      </div>
+    </a>
+    <figcaption class="thumb-caption">
+      <strong>Toque humano:</strong> testimonio clínico que muestra la progresión del trastorno.
+      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
+    </figcaption>
+    <div class="hook">Toque humano</div>
+  </figure>
 
-          <figure class="testimonio" role="article" aria-labelledby="t3">
-            <a href="#detalle-perdida-economica" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
-              <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/perdida_economica_caja.jpg" loading="lazy" alt="Caja de mudanza abierta frente a una puerta cerrada; objetos personales dispersos" width="1200" height="800">
-              <div class="overlay">
-                <div class="quote">“He perdido fácil más de dos millones de pesos.”</div>
-                <div class="credit">Testimonio personal; recuperación parcial</div>
+  <figure class="testimonio" role="article" aria-labelledby="t3">
+    <a href="#detalle-perdida-economica" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/perdida_economica_caja.jpg" loading="lazy" alt="Caja de mudanza abierta frente a una puerta cerrada; objetos personales dispersos" width="1200" height="800">
+    </a>
+  </figure>
+</div>
+
               </div>
             </a>
             <figcaption class="thumb-caption">
