@@ -2,7 +2,7 @@
   <!-- Hero -->
 <section class="hero" aria-labelledby="main-headline">
   <article class="hero-main">
-    <div class="kicker">Investigación</div>
+    <div class="kicker">Investigación</div> 
     <h1 id="main-headline" class="headline">La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero</h1>
     <p class="standfirst">Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.</p>
 
