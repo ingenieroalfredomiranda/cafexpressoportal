@@ -17,27 +17,6 @@
       .container{padding:0 16px}
     }
 
-    /* ===== Modal del cuestionario ===== */
-    .quiz-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1200}
-    .quiz-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.55)}
-    .quiz-panel{position:relative;width:min(880px,94%);max-height:90vh;overflow:auto;background:#fff;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.35);z-index:2}
-    .quiz-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #eee}
-    .quiz-header h3{margin:0;font-family:var(--serif);font-size:18px}
-    .quiz-close{background:transparent;border:0;font-size:26px;line-height:1;cursor:pointer;color:#333}
-    .quiz-body{padding:18px 20px;font-size:15px;color:var(--text)}
-    .quiz-intro{margin:0 0 12px 0;color:var(--muted)}
-    .quiz-list{list-style:none;padding:0;margin:0 0 12px 0}
-    .quiz-list li{margin-bottom:12px;padding:10px;border-radius:6px;background:#fafafa;display:flex;align-items:center;gap:12px}
-    .quiz-question{flex:1;font-family:var(--sans);font-size:15px}
-    .quiz-options{display:flex;gap:10px}
-    .quiz-options label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;padding:6px 10px;border-radius:6px;background:#fff;border:1px solid #e6e6e6}
-    .quiz-actions{display:flex;gap:10px;margin-top:12px}
-    .btn-primary{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
-    .btn-secondary{background:#f3f3f3;color:#333;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
-    .btn-link{background:transparent;border:0;color:var(--accent);padding:12px;cursor:pointer}
-    .quiz-result{margin-top:14px;padding:12px;border-radius:6px;background:#fff8f8;border-left:4px solid var(--accent)}
-    .quiz-footer{padding:12px 20px;border-top:1px solid #eee;text-align:right}
-    @media (max-width:700px){ .quiz-panel{width:96%} .quiz-list li{flex-direction:column;align-items:flex-start} }
   </style>
 </head>
 <body>
