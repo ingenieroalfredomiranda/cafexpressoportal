@@ -26,17 +26,6 @@
                          background:rgba(0,0,0,0.7);color:#fff;padding:16px;
                          text-align:center;border-radius:0 0 6px 6px;">
         <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-          La apuesta perdida: Culiacán atrapado en la ruina del juego
-        </div>
-        <div style="font-size:16px;font-style:italic;line-height:1.4;">
-          Una adicción silenciosa que devora vidas y bolsillos
-        </div>
-        <a href="segunda-parte.html" title="Haz click para seguir leyendo"
-           style="display:inline-block;margin-top:12px;padding:8px 14px;
-                  background-color:#e53935;color:#fff;font-weight:bold;
-                  font-size:14px;text-decoration:none;border-radius:4px;
-                  transition:background-color 0.3s ease,transform 0.2s ease;">
-          Haz click para seguir leyendo »
         </a>
       </figcaption>
     </figure>
