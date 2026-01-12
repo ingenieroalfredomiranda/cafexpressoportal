@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>cafexpressoportal | sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)</title>
     <meta name="generator" content="Jekyll v3.10.0" />
@@ -22,17 +22,158 @@
     {"@context":"https://schema.org","@type":"WebSite","description":"sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)","headline":"cafexpressoportal","name":"cafexpressoportal","url":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/"}
     </script>
 
-    <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=ab4674ef2b505aee2d39e04b4196ba94d95b540e">
+    <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=ab4674ef2b505aee2d39e04b4196ba94d95b540e" />
+
+    <!-- Estilos añadidos: mover reglas inline a clases, tipografía responsiva y estilos de botones -->
+    <style>
+      :root {
+        --accent: #ff5252;
+        --muted: #6b6b6b;
+        --caption-bg: rgba(0,0,0,0.75);
+      }
+
+      .container-lg { max-width: 980px; margin: 0 auto; }
+
+      /* Imágenes */
+      .imagen-ajustada,
+      .responsive-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 6px;
+        max-width: 100%;
+      }
+
+      /* Hero / figuras con overlay */
+      .hero-image,
+      .info-image,
+      .capture-test,
+      .testimonio {
+        position: relative;
+        margin: 0 0 24px 0;
+      }
+
+      .hero-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--caption-bg);
+        color: #fff;
+        padding: 16px;
+        border-radius: 0 0 6px 6px;
+      }
+
+      .hero-caption.text-left { text-align: left; padding: 20px; background: rgba(0,0,0,0.75); }
+      .hero-caption.text-center { text-align: center; background: rgba(0,0,0,0.7); }
+
+      .hero-title {
+        font-size: clamp(18px, 4vw, 22px);
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 8px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      }
+
+      .hero-heading {
+        font-size: clamp(20px, 4vw, 26px);
+        font-weight: 700;
+        color: var(--accent);
+        margin: 0;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      }
+
+      .hero-subheading {
+        font-size: clamp(16px, 3vw, 18px);
+        font-weight: 400;
+        color: #f0f0f0;
+        margin: 4px 0 12px 0;
+      }
+
+      .hero-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 0 8px 0;
+        color: #fff;
+      }
+
+      .hero-credit {
+        font-size: 12px;
+        color: #ccc;
+        margin-top: 10px;
+      }
+
+      /* Info image caption (no overlay) */
+      .info-caption {
+        position: static;
+        background: transparent;
+        color: #444;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .info-caption h4 {
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        color: #222;
+      }
+
+      .shadowed {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      }
+
+      /* Botones */
+      .btn-access-test {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 12px;
+      }
+
+      .btn-access-test:hover,
+      .btn-access-test:focus {
+        background: #e04848;
+        outline: none;
+      }
+
+      /* Utilidades y texto */
+      .kicker { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+      .headline { font-size: clamp(20px, 3.5vw, 28px); margin: 6px 0 12px 0; }
+      .byline { font-size: 14px; color: #333; margin-bottom: 8px; }
+      .summary { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
+
+      /* Testimonios: normalizar imagen y caption (overlay) */
+      .testimonio img { object-fit: contain; }
+      .testimonio figcaption {
+        background: rgba(0,0,0,0.75);
+        color: #fff;
+        padding: 16px;
+        border-radius: 0 0 6px 6px;
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        .hero-caption { padding: 12px; }
+        .btn-access-test { padding: 8px 14px; font-size: 13px; }
+      }
+    </style>
   </head>
+
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
-      
       <h1><a href="https://ingenieroalfredomiranda.github.io/cafexpressoportal/">cafexpressoportal</a></h1>
-      
+
       <!-- Hero -->
       <section class="hero" aria-labelledby="main-headline">
         <article class="hero-main">
-          <div class="kicker">Investigación</div> 
+          <div class="kicker">Investigación</div>
           <h1 id="main-headline" class="headline">
             La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
           </h1>
@@ -41,37 +182,66 @@
             Por <strong>Cafe Expreso Portal</strong> — Investigación y reportaje
           </div>
 
-          <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
+          <p class="summary">
             Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
           </p>
 
           <!-- Portada principal -->
-          <figure class="hero-image" style="position:relative;">
-            <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" 
-                 alt="Portada principal: apuestas en Culiacán" 
-                 class="imagen-ajustada responsive-img" 
-                 loading="lazy" 
-                 style="width:100%;height:auto;display:block;object-fit:cover;max-width:100%;border-radius:6px;" />
-            <figcaption class="hero-caption" style="position:absolute;bottom:0;left:0;width:100%;
-                               background:rgba(0,0,0,0.7);color:#fff;padding:16px;
-                               text-align:center;border-radius:0 0 6px 6px;">
-              <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-                Apuestas en Culiacán
-              </div>
+          <figure class="hero-image">
+            <img
+              src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
+              alt="Portada principal: apuestas en Culiacán"
+              class="imagen-ajustada responsive-img"
+              loading="lazy"
+            />
+            <figcaption class="hero-caption text-center">
+              <div class="hero-title">Apuestas en Culiacán</div>
             </figcaption>
           </figure>
         </article>
       </section>
 
+      <!-- Portada principal adicional (Café) -->
+      <figure class="hero-image">
+        <img
+          src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/cafe.jpg"
+          alt="Portada principal: café en Culiacán"
+          class="imagen-ajustada responsive-img"
+          loading="lazy"
+        />
+        <figcaption class="hero-caption text-center">
+          <div class="hero-title">Café en Culiacán</div>
+        </figcaption>
+      </figure>
+
+      <!-- Portada narrativa tipo reportaje -->
+      <figure class="hero-image">
+        <img
+          src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino.jpg"
+          alt="Entrada de casino en Culiacán, de noche"
+          class="imagen-ajustada responsive-img"
+          loading="lazy"
+        />
+        <figcaption class="hero-caption text-left">
+          <h2 class="hero-heading">LA APUESTA PERDIDA</h2>
+          <h3 class="hero-subheading">Culiacán en la ruina del juego</h3>
+          <p class="hero-text">Por <strong>Café Expreso Portal</strong> — Investigación y reportaje</p>
+          <p class="hero-text">Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.</p>
+          <p class="hero-credit">CRÉDITO FOTO: Investigaciones Café Expreso Portal</p>
+        </figcaption>
+      </figure>
+
       <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
       <section aria-label="Captura principal">
         <figure class="capture-test" aria-labelledby="captureTitle">
-          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg" 
-               alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación" 
-               loading="lazy" 
-               class="imagen-ajustada responsive-img" />
-          <figcaption id="captureTitle" class="capture-caption">
-            <strong>Cómo ayudar</strong><br />
+          <img
+            src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
+            alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
+            loading="lazy"
+            class="imagen-ajustada responsive-img"
+          />
+          <figcaption id="captureTitle" class="info-caption">
+            <h4>Cómo ayudar</h4>
             Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
             <br />
             <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
@@ -79,24 +249,41 @@
         </figure>
       </section>
 
+      <!-- Cartel informativo sobre ludopatía con botón de encuesta -->
+      <figure class="info-image">
+        <img
+          src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ludopatia-cartel.jpg"
+          alt="Cartel sobre juego patológico: síntomas, ayuda psicológica 24 horas y contacto de emergencia"
+          class="imagen-ajustada responsive-img shadowed"
+          loading="lazy"
+        />
+        <figcaption class="info-caption">
+          <h4>JUEGO PATOLÓGICO — LUDOPATÍA</h4>
+          Señales de adicción al juego: pensamiento persistente, necesidad de apostar más, irritabilidad, mentiras, pérdidas económicas y familiares.
+          <br />
+          <em>Si te identificas, puedes necesitar ayuda. Atención psicológica 24 horas: <strong>911</strong></em>
+          <br />
+          Fuente: Secretaría de Salud, Gobierno de Sonora.
+          <br /><br />
+          <button id="openSurvey" class="btn-access-test" aria-haspopup="dialog" aria-controls="surveyModal">Acceder a la encuesta</button>
+        </figcaption>
+      </figure>
+
       <!-- Testimonios -->
       <div class="testimonios" aria-label="Testimonios destacados">
-
         <!-- Testimonio t1 -->
         <figure class="testimonio" role="article" aria-labelledby="t1">
           <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social">
-            <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg" 
-                 loading="lazy" 
-                 alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas" 
-                 style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;" />
+            <img
+              src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg"
+              loading="lazy"
+              alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
+              class="imagen-ajustada responsive-img"
+            />
           </a>
-          <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
-            <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-              Apostadores llegan hasta a prostituirse
-            </div>
-            <div style="font-size:16px;font-style:italic;margin-bottom:12px;">
-              Las graves conductas de la ludopatía
-            </div>
+          <figcaption>
+            <div class="hero-title" style="color:var(--accent);">Apostadores llegan hasta a prostituirse</div>
+            <div style="font-size:16px;font-style:italic;margin-bottom:12px;">Las graves conductas de la ludopatía</div>
             <a href="segunda-parte.html" class="btn-link">Haz click para seguir leyendo »</a>
           </figcaption>
         </figure>
@@ -104,15 +291,15 @@
         <!-- Testimonio t2 -->
         <figure class="testimonio" role="article" aria-labelledby="t2">
           <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano">
-            <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg" 
-                 loading="lazy" 
-                 alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón" 
-                 style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;" />
+            <img
+              src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg"
+              loading="lazy"
+              alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón"
+              class="imagen-ajustada responsive-img"
+            />
           </a>
-          <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
-            <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-              "Puse en riesgo hasta mi vida por la adicción al casino"
-            </div>
+          <figcaption>
+            <div class="hero-title" style="color:var(--accent);">"Puse en riesgo hasta mi vida por la adicción al casino"</div>
             <a href="segunda-parte.html" class="btn-link">Haz click para seguir leyendo »</a>
           </figcaption>
         </figure>
@@ -120,6 +307,26 @@
         <!-- Testimonio t3 -->
         <figure class="testimonio" role="article" aria-labelledby="t3">
           <a href="detalle.html" title="Abrir testimonio: Pérdida económica">
+            <img
+              src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/perdida_economica.jpg"
+              loading="lazy"
+              alt="Persona revisando cuentas y facturas; expresión de preocupación"
+              class="imagen-ajustada responsive-img"
+            />
+          </a>
+          <figcaption>
+            <div class="hero-title" style="color:var(--accent);">Pérdidas que destruyen familias</div>
+            <div style="font-size:16px;font-style:italic;margin-bottom:12px;">Historias de endeudamiento y desarraigo</div>
+            <a href="segunda-parte.html" class="btn-link">Haz click para seguir leyendo »</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Nota: los botones con aria-controls deben enlazar a modales implementados en tu JS; aquí solo están los elementos HTML -->
+  </body>
+</html>
+
 
 
        <!-- Secciones ampliadas -->
