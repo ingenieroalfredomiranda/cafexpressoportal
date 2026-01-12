@@ -6,41 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Jekyll SEO / Open Graph -->
-    <title>cafexpressoportal | sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)</title>
+    <title>cafexpressosportal | sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)</title>
     <meta name="generator" content="Jekyll v3.10.0" />
-    <meta name="description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
-    <meta name="keywords" content="periodismo, investigación, UAS, noticias, cafexpressoportal, Alfredo Miranda" />
+    <meta name="description" content="Sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
+    <meta name="keywords" content="periodismo, investigación, UAS, noticias, cafexpressosportal, Alfredo Miranda" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="cafexpressoportal" />
+    <meta property="og:title" content="cafexpressosportal" />
     <meta property="og:locale" content="es_MX" />
-    <meta property="og:description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
-    <meta property="og:url" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/" />
-    <meta property="og:site_name" content="cafexpressoportal" />
+    <meta property="og:description" content="Sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
+    <meta property="og:url" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/" />
+    <meta property="og:site_name" content="cafexpressosportal" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png" />
+    <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="cafexpressoportal" />
-    <meta name="twitter:description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
-    <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png" />
+    <meta name="twitter:title" content="cafexpressosportal" />
+    <meta name="twitter:description" content="Sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
+    <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressoportal/" />
+    <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressosportal/" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "cafexpressoportal",
-        "url": "https://ingenieroalfredomiranda.github.io/cafexpressoportal/",
-        "description": "sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)",
-        "headline": "cafexpressoportal",
-        "image": "https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png"
+        "name": "cafexpressosportal",
+        "url": "https://ingenieroalfredomiranda.github.io/cafexpressosportal/",
+        "description": "Sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)",
+        "headline": "cafexpressosportal",
+        "image": "https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png"
       }
     </script>
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=51ab0bafa6680ed18ba8703b2a05c6a3514c81b2" />
