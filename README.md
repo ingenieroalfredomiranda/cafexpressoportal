@@ -13,11 +13,18 @@
     </p>
   </article>
 
-  <aside class="side" aria-label="Portada y destacados">
-    <figure class="hero-image">
-      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg" alt="Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas" loading="lazy" width="1200" height="800">
-      <figcaption class="hero-caption">Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.</figcaption>
-    </figure>
+<aside class="side" aria-label="Portada y destacados">
+  <figure class="hero-image">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
+         alt="Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas"
+         loading="lazy"
+         class="imagen-ajustada">
+    <figcaption class="hero-caption">
+      Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.
+    </figcaption>
+  </figure>
+</aside>
+
 
     <div class="card">
       <h4>Hallazgos clave</h4>
@@ -34,7 +41,10 @@
 <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
 <section aria-label="Captura principal">
   <figure class="capture-test" aria-labelledby="captureTitle">
-    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg" alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación" loading="lazy" width="1200" height="800">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
+         alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
+         loading="lazy"
+         class="imagen-ajustada">
     <figcaption id="captureTitle" class="capture-caption">
       <strong>Cómo ayudar</strong><br>
       Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
@@ -43,6 +53,7 @@
     </figcaption>
   </figure>
 </section>
+
 
 <!-- Article body -->
 <main class="article" role="main" id="main-content">
@@ -62,7 +73,10 @@
 <div class="testimonios" aria-label="Testimonios destacados">
   <figure class="testimonio" role="article" aria-labelledby="t1">
     <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
-      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg" loading="lazy" alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas" width="1200" height="800">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg"
+           loading="lazy"
+           alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
+           class="imagen-ajustada">
       <div class="overlay">
         <div class="quote">“Apostadores llegan hasta a prostituirse.”</div>
         <div class="credit">Publicación local; relato de supervivencia económica</div>
@@ -77,25 +91,16 @@
 
   <figure class="testimonio" role="article" aria-labelledby="t2">
     <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
-      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg" loading="lazy" alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón" width="1200" height="800">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg"
+           loading="lazy"
+           alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón"
+           class="imagen-ajustada">
       <div class="overlay">
         <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
         <div class="credit">Caso clínico; Los Mochis</div>
       </div>
     </a>
     <figcaption class="thumb-caption">
-      <strong>Toque humano:</strong> testimonio clínico que muestra la progresión del trastorno.
-      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
-    </figcaption>
-    <div class="hook">Toque humano</div>
-  </figure>
-
-  <figure class="testimonio" role="article" aria-labelledby="t3">
-    <a href="#detalle-perdida-economica" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
-      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/perdida_economica_caja.jpg" loading="lazy" alt="Caja de mudanza abierta frente a una puerta cerrada; objetos personales dispersos" width="1200" height="800">
-    </a>
-  </figure>
-</div>
 <figure>
   <a href="detalle.html">
     <img src="imagen.jpg" alt="Ejemplo">
