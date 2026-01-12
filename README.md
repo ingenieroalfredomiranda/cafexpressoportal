@@ -100,17 +100,19 @@
         <div class="credit">Caso clínico; Los Mochis</div>
       </div>
     </a>
-    <figcaption class="thumb-caption">
 <figure>
   <a href="detalle.html">
-    <img src="imagen.jpg" alt="Ejemplo">
+    <img src="casino.jpg" alt="Casino" class="responsive-img">
   </a>
   <figcaption class="thumb-caption">
     <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
     <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
   </figcaption>
-  <div class="hook">Pérdida económica</div>
+  <footer class="image-footer">
+    Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+  </footer>
 </figure>
+
 
        <!-- Secciones ampliadas -->
 <section id="secciones-ampliadas">
