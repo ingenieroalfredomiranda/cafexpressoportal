@@ -57,16 +57,7 @@
            alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
            class="imagen-ajustada">
       <div class="overlay">
-        <div class="quote">“Apostadores llegan hasta a prostituirse.”</div>
-        <div class="credit">Publicación local; relato de supervivencia económica</div>
-      </div>
-    </a>
-    <figcaption class="thumb-caption">
-      <strong>Impacto social:</strong> relatos de supervivencia que muestran la marginalización económica.
-      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
-    </figcaption>
-    <div class="hook">Impacto social</div>
-  </figure>
+       <div class="overlay" style="position:relative;background:rgba(0,0,0,0.7);padding:18px;border-radius:6px;color:#fff;text-align:center;"> <blockquote class="quote" style="font-size:20px;font-weight:bold;color:#ff5252;margin-bottom:10px;"> Apostadores llegan hasta a prostituirse. </blockquote> <div class="credit" style="font-size:15px;color:#f5f5f5;margin-bottom:14px;"> Las graves conductas de la ludopatía </div> <a href="segunda-parte.html" class="cta-link" title="Haz click para seguir leyendo" style="display:inline-block;padding:10px 18px;background-color:#ffd54f;color:#2c0d0d;font-weight:bold;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;"> Haz click para seguir leyendo » </a> </div> </a>
 
   <figure class="testimonio" role="article" aria-labelledby="t2">
     <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
