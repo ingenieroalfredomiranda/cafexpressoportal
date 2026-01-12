@@ -93,8 +93,7 @@
     </a>
     <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
       <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-        “El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”  
-        Historia de la joven que perdió todo por la adicción al casino
+        "Puse en riesgo hasta mi vida por  la adicción al casino"  testimonio real 
       </div>
       <a href="segunda-parte.html" title="Haz click para seguir leyendo"
          style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
@@ -112,7 +111,7 @@
     </a>
     <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
       <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-        Pérdida económica: Perdí más de dos millones de pesos en apuestas, un recordatorio del impacto real
+         "Perdí más de dos millones de pesos en apuestas", un testimonio anonimo real
       </div>
       <a href="segunda-parte.html" title="Haz click para seguir leyendo"
          style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
