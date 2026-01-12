@@ -58,16 +58,22 @@
            loading="lazy"
            alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
            style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;">
-      <div class="overlay" style="position:relative;background:rgba(0,0,0,0.7);padding:22px;border-radius:8px;color:#fff;text-align:center;">
-        <blockquote class="quote" style="font-size:26px;font-weight:bold;color:#ff5252;margin-bottom:12px;">
-          Apostadores llegan hasta a prostituirse.
-        </blockquote>
-        <div class="credit" style="font-size:18px;color:#f5f5f5;margin-bottom:18px;">
-          Las graves conductas de la ludopatía
-        </div>
-        <a href="segunda-parte.html" title="Haz click para seguir leyendo"
-           style="display:inline-block;padding:12px 22px;background-color:#e53935;color:#fff;font-weight:bold;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
-          Haz click para seguir leyendo »
+    </a>
+    <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
+      <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
+        Apostadores llegan hasta a prostituirse
+      </div>
+      <div style="font-size:16px;font-style:italic;margin-bottom:12px;">
+        Las graves conductas de la ludopatía
+      </div>
+      <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+         style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
+        Haz click para seguir leyendo »
+      </a>
+    </figcaption>
+  </figure>
+</div>
+
         </a>
       </div>
     </a>
