@@ -46,18 +46,34 @@
 </section>
 
 
-    <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
-      Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
-    </p> 
-  </article<div class="testimonios" aria-label="Testimonios destacados">
+   <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
+  Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
+</p>
+</article>
+
+<div class="testimonios" aria-label="Testimonios destacados">
   <figure class="testimonio" role="article" aria-labelledby="t1">
     <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg"
            loading="lazy"
            alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
-           class="imagen-ajustada">
-      <div class="overlay">
-       <div class="overlay" style="position:relative;background:rgba(0,0,0,0.7);padding:18px;border-radius:6px;color:#fff;text-align:center;"> <blockquote class="quote" style="font-size:20px;font-weight:bold;color:#ff5252;margin-bottom:10px;"> Apostadores llegan hasta a prostituirse. </blockquote> <div class="credit" style="font-size:15px;color:#f5f5f5;margin-bottom:14px;"> Las graves conductas de la ludopatía </div> <a href="segunda-parte.html" class="cta-link" title="Haz click para seguir leyendo" style="display:inline-block;padding:10px 18px;background-color:#ffd54f;color:#2c0d0d;font-weight:bold;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;"> Haz click para seguir leyendo » </a> </div> </a>
+           style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;">
+      <div class="overlay" style="position:relative;background:rgba(0,0,0,0.7);padding:22px;border-radius:8px;color:#fff;text-align:center;">
+        <blockquote class="quote" style="font-size:26px;font-weight:bold;color:#ff5252;margin-bottom:12px;">
+          Apostadores llegan hasta a prostituirse.
+        </blockquote>
+        <div class="credit" style="font-size:18px;color:#f5f5f5;margin-bottom:18px;">
+          Las graves conductas de la ludopatía
+        </div>
+        <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+           style="display:inline-block;padding:12px 22px;background-color:#e53935;color:#fff;font-weight:bold;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
+          Haz click para seguir leyendo »
+        </a>
+      </div>
+    </a>
+  </figure>
+</div>
+
 
   <figure class="testimonio" role="article" aria-labelledby="t2">
     <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
