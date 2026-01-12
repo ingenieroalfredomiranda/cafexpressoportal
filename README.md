@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es-MX">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,21 +8,40 @@
     <!-- Jekyll SEO / Open Graph -->
     <title>cafexpressoportal | sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)</title>
     <meta name="generator" content="Jekyll v3.10.0" />
-    <meta property="og:title" content="cafexpressoportal" />
-    <meta property="og:locale" content="en_US" />
     <meta name="description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
+    <meta name="keywords" content="periodismo, investigación, UAS, noticias, cafexpressoportal, Alfredo Miranda" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="cafexpressoportal" />
+    <meta property="og:locale" content="es_MX" />
     <meta property="og:description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
-    <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressoportal/" />
     <meta property="og:url" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/" />
     <meta property="og:site_name" content="cafexpressoportal" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="cafexpressoportal" />
+    <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png" />
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="cafexpressoportal" />
+    <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressoportal/" />
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"WebSite","description":"sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)","headline":"cafexpressoportal","name":"cafexpressoportal","url":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/"}
+      {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "description":"sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)",
+        "headline":"cafexpressoportal",
+        "name":"cafexpressoportal",
+        "url":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/",
+        "image":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png"
+      }
     </script>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=51ab0bafa6680ed18ba8703b2a05c6a3514c81b2" />
 
     <!-- Estilos locales (temporal). Extrae esto a style.css en producción -->
@@ -31,6 +50,10 @@
         --accent: #ff5252;
         --muted: #6b6b6b;
         --caption-bg: rgba(0,0,0,0.75);
+      }
+    </style>
+  </head>
+
       }
 
       /* Contenedor */
