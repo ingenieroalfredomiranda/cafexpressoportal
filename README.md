@@ -98,8 +98,6 @@
       <div class="overlay">
         <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
         <div class="credit">Caso clínico; Los Mochis</div>
-      </div>
-    </a>
 <figure>
   <a href="detalle.html">
     <img src="casino.jpg" alt="Casino" class="responsive-img">
@@ -111,6 +109,10 @@
     </button>
     <p class="image-footer">
       Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+    </p>
+  </figcaption>
+</figure>
+
     </p>
   </figcaption>
 </figure>
