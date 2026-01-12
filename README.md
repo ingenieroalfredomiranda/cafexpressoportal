@@ -5,10 +5,43 @@
     <h1 id="main-headline" class="headline">
       La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
     </h1>
+<!-- Banner superior -->
+<header class="banner-top" role="banner" aria-label="Identidad editorial Café Expreso Portal">
+  <img src="SYE42zHSdNZUm7nDDxnFe.jpeg"
+       alt="Logotipo de Café Expreso Portal: Reportajes, Información y Análisis"
+       class="banner-logo"
+       loading="lazy">
+</header>
 
-    <div class="byline">
-      Por <strong>Cafe Expreso Portal</strong> — Investigación y reportaje
-    </div>
+<style>
+  .banner-top {
+    width: 100%;
+    background-color: #fff;
+    padding: 8px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-logo {
+    max-height: 60px;   /* tamaño en escritorio */
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width:480px){
+    .banner-top {
+      padding: 6px 12px;
+    }
+    .banner-logo {
+      max-height: 40px; /* más pequeño en celular */
+    }
+  }
+</style>
 
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
       Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
