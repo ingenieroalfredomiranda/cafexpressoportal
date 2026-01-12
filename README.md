@@ -1,12 +1,48 @@
 
-  <!-- Hero -->
+<!-- Hero -->
 <section class="hero" aria-labelledby="main-headline">
   <article class="hero-main">
     <div class="kicker">Investigación</div> 
-    <h1 id="main-headline" class="headline">La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero</h1>
-    <p class="standfirst">Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.</p>
+    <h1 id="main-headline" class="headline">
+      La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
+    </h1>
+    <p class="standfirst">
+      Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.
+    </p>
 
-    <div class="byline">Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje</div>
+    <div class="byline">
+      Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje
+    </div>
+
+    <!-- Portada principal -->
+    <figure class="hero-image">
+      <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
+           alt="Portada principal: apuestas en Culiacán"
+           class="imagen-ajustada responsive-img"
+           loading="lazy">
+      <figcaption class="hero-caption">
+        Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.
+      </figcaption>
+    </figure>
+  </article>
+</section>
+
+<!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
+<section aria-label="Captura principal">
+  <figure class="capture-test" aria-labelledby="captureTitle">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
+         alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
+         loading="lazy"
+         class="imagen-ajustada responsive-img">
+    <figcaption id="captureTitle" class="capture-caption">
+      <strong>Cómo ayudar</strong><br>
+      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
+      <br>
+      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
+    </figcaption>
+  </figure>
+</section>
+
 
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
       Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
