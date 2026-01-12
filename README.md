@@ -29,24 +29,6 @@
     </figure>
   </article>
 </section>
-
-<!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
-<section aria-label="Captura principal">
-  <figure class="capture-test" aria-labelledby="captureTitle">
-    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
-         alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
-         loading="lazy"
-         class="imagen-ajustada responsive-img">
-    <figcaption id="captureTitle" class="capture-caption">
-      <strong>Cómo ayudar</strong><br>
-      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
-      <br>
-      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
-    </figcaption>
-  </figure>
-</section>
-
-
 <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
 <section aria-label="Captura principal">
   <figure class="capture-test" aria-labelledby="captureTitle">
