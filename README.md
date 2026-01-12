@@ -48,7 +48,7 @@
 
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
       Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
-    </p>
+    </p> 
   </article<div class="testimonios" aria-label="Testimonios destacados">
   <figure class="testimonio" role="article" aria-labelledby="t1">
     <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
