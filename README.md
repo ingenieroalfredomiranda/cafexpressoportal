@@ -23,6 +23,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="cafexpressoportal" />
+    <meta name="twitter:description" content="sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)" />
     <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png" />
 
     <!-- Canonical -->
@@ -33,10 +34,10 @@
       {
         "@context":"https://schema.org",
         "@type":"WebSite",
-        "description":"sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)",
-        "headline":"cafexpressoportal",
         "name":"cafexpressoportal",
         "url":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/",
+        "description":"sitio de noticias de investigación de la carrera de periodismo UAS (Alfredo Miranda)",
+        "headline":"cafexpressoportal",
         "image":"https://ingenieroalfredomiranda.github.io/cafexpressoportal/assets/cafe.png"
       }
     </script>
