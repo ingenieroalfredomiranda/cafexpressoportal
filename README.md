@@ -38,7 +38,6 @@
            class="imagen-ajustada">
       <div class="overlay">
         <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
-        <div class="credit">Caso clínico; Los Mochis</div>
 <figure class="testimonio" role="article" aria-labelledby="t3">
   <a href="detalle.html" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
     <img src="dosmillones.png" alt="Dos millones" class="imagen-ajustada responsive-img">
