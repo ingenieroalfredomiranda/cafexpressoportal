@@ -110,6 +110,7 @@
   </figcaption>
   <footer class="image-footer">
     Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+  
   </footer>
 </figure>
 
