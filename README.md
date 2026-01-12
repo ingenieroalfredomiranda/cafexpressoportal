@@ -106,10 +106,14 @@
   </a>
   <figcaption class="thumb-caption">
     <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
-    <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
+    <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">
+      ¿Me afecta?
+    </button>
+    <p class="image-footer">
+      Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+    </p>
   </figcaption>
-  <footer class="image-footer">
-    Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+</figure>
 
   </footer>
 </figure>
