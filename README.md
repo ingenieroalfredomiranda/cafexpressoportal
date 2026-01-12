@@ -9,7 +9,7 @@
   <meta name="keywords" content="café, periodismo, local, noticias, análisis">
   <meta name="author" content="Café Portal">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tusitio.com/">
+  <link rel="canonical" href="https://tusitio.com/"> 
   
   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
   <meta property="og:locale" content="es_MX">
