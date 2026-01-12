@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,6 +99,25 @@
   <style>
     :root{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
     /* estilos críticos mínimos */
+    *{box-sizing:border-box}
+    body{margin:0;color:#111;background:#fff;line-height:1.45}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    .hero{margin-bottom:24px}
+    .kicker{color:#b33;font-weight:600;margin-bottom:8px}
+    .headline{font-size:1.6rem;margin:0 0 8px}
+    .byline{color:#555;margin-bottom:12px}
+    .summary{background:#f7f7f7;padding:12px;border-radius:6px}
+    figure{margin:16px 0}
+    img.responsive-img{max-width:100%;height:auto;display:block;border-radius:6px}
+    .hero-caption{font-size:0.9rem;color:#444;margin-top:6px}
+    .info-caption h4{margin:0 0 6px}
+    .btn-access-test{display:inline-block;padding:10px 14px;background:#0b5fff;color:#fff;border:none;border-radius:6px;cursor:pointer}
+    .btn-access-test:focus{outline:3px solid #ffd54d}
+    /* Modal styles (fallback minimal) */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000}
+    .modal{background:#fff;max-width:720px;width:100%;border-radius:8px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+    .close-btn{background:#eee;border:0;padding:8px 10px;border-radius:6px;cursor:pointer}
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
   </style>
   
   <!-- Notas finales y espacio reservado -->
@@ -105,53 +126,158 @@
   <!-- Línea 105: conserva este bloque como reemplazo completo -->
   <!-- Fin del head personalizado para reemplazo -->
 </head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="main-headline">
+      <article class="hero-main">
+        <div class="kicker">Investigación</div>
+        <h1 id="main-headline" class="headline">
+          La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
+        </h1>
 
+        <div class="byline">
+          Por <strong>Cafe Expreso Portal</strong> — Investigación y reportaje
+        </div>
 
-  
-      <!-- Hero -->
-      <section class="hero" aria-labelledby="main-headline">
-        <article class="hero-main">
-          <div class="kicker">Investigación</div>
-          <h1 id="main-headline" class="headline">
-            La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
-          </h1>
+        <p class="summary">
+          Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
+        </p>
 
-          <div class="byline">
-            Por <strong>Cafe Expreso Portal</strong> — Investigación y reportaje
-          </div>
-
-          <p class="summary">
-            Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
-          </p>
-
-          <!-- Portada principal -->
-          <figure class="hero-image">
-            <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
-                 alt="Portada principal: apuestas en Culiacán"
-                 class="imagen-ajustada responsive-img"
-                 loading="lazy" />
-            <figcaption class="hero-caption text-center" role="note">
-              <div class="hero-title">Apuestas en Culiacán</div>
-            </figcaption>
-          </figure>
-        </article>
-      </section>
-
-      <!-- Captura principal -->
-      <section aria-label="Captura principal">
-        <figure class="capture-test" aria-labelledby="captureTitle">
-          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
-               alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
-               loading="lazy"
-               class="imagen-ajustada responsive-img" />
-          <figcaption id="captureTitle" class="info-caption" role="note">
-            <h4>Cómo ayudar</h4>
-            Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
-            <br />
-            <button id="openQuiz" type="button" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal" aria-label="Abrir test sobre ludopatía">Acceder al test</button>
+        <!-- Portada principal -->
+        <figure class="hero-image">
+          <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
+               alt="Portada principal: apuestas en Culiacán"
+               class="imagen-ajustada responsive-img"
+               loading="lazy" />
+          <figcaption class="hero-caption text-center" role="note">
+            <div class="hero-title">Apuestas en Culiacán</div>
           </figcaption>
         </figure>
-      </section>
+      </article>
+    </section>
+
+    <!-- Captura principal -->
+    <section aria-label="Captura principal">
+      <figure class="capture-test" aria-labelledby="captureTitle">
+        <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
+             alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
+             loading="lazy"
+             class="imagen-ajustada responsive-img" />
+        <figcaption id="captureTitle" class="info-caption" role="note">
+          <h4>Cómo ayudar</h4>
+          Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
+          <br />
+          <button id="openQuiz" type="button" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal" aria-label="Abrir test sobre ludopatía">Acceder al test</button>
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <!-- Modal accesible (inicialmente oculto) -->
+  <div id="quizModalBackdrop" class="modal-backdrop" role="presentation" aria-hidden="true">
+    <div id="quizModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quizTitle" aria-hidden="true" tabindex="-1">
+      <h2 id="quizTitle">Test rápido sobre ludopatía</h2>
+      <p>Este test es orientativo y no sustituye una evaluación profesional. Si detectas riesgo, busca ayuda especializada.</p>
+
+      <form id="quizForm">
+        <fieldset>
+          <legend>1. ¿Has sentido que apuestas más de lo que puedes permitirte perder?</legend>
+          <label><input type="radio" name="q1" value="si"> Sí</label><br>
+          <label><input type="radio" name="q1" value="no"> No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. ¿Has intentado reducir o dejar de apostar sin lograrlo?</legend>
+          <label><input type="radio" name="q2" value="si"> Sí</label><br>
+          <label><input type="radio" name="q2" value="no"> No</label>
+        </fieldset>
+
+        <div style="margin-top:12px;">
+          <button type="button" id="closeQuiz" class="close-btn">Cerrar</button>
+          <button type="submit" class="btn-access-test" style="margin-left:8px;">Enviar (orientativo)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts: modal y formulario -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var openBtn = document.getElementById('openQuiz');
+      var backdrop = document.getElementById('quizModalBackdrop');
+      var dialog = document.getElementById('quizModal');
+      var closeBtn = document.getElementById('closeQuiz');
+      var form = document.getElementById('quizForm');
+      var previouslyFocused = null;
+
+      function openModal() {
+        previouslyFocused = document.activeElement;
+        if (backdrop) backdrop.style.display = 'flex';
+        if (dialog) {
+          dialog.setAttribute('aria-hidden', 'false');
+          dialog.focus();
+        }
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (backdrop) backdrop.style.display = 'none';
+        if (dialog) dialog.setAttribute('aria-hidden', 'true');
+        if (previouslyFocused) previouslyFocused.focus();
+        document.body.style.overflow = '';
+      }
+
+      function onKeyDown(e) {
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Tab' && dialog) {
+          var focusable = dialog.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          if (focusable.length === 0) return;
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', function (e) { if (e.target === backdrop) closeModal(); });
+      document.addEventListener('keydown', onKeyDown);
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var answers = new FormData(form);
+          var score = 0;
+          for (var pair of answers.entries()) {
+            if (pair[1] === 'si') score++;
+          }
+          var message = 'Resultados orientativos: ' + score + ' respuesta(s) afirmativa(s).';
+          alert(message + '\nSi tienes dudas, contacta a servicios de salud mental.');
+          closeModal();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!-- Estilos críticos inline -->
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; color:#111; background:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;line-height:1.45;padding:20px}
+    .hero{max-width:980px;margin:0 auto 24px}
+    .kicker{color:#b33;font-weight:600;margin-bottom:8px}
+    .headline{font-size:1.6rem;margin:0 0 8px}
+    .byline{color:#555;margin-bottom:12px}
+    .summary{background:#f7f7f7;padding:12px;border-radius:6px}
+    figure{margin:16px 0}
+    img.responsive-img{max-width:100%;height:auto;display:block;border-radius:6px}
+    .hero-caption{font-size:0.9rem;color:#444;margin-top:6px}
+    .info-caption h4{margin:0 0 6px}
+    .btn-access-test{display:inline-block;padding:10px 14px;background:#0b5fff;color:#fff;border:none;border-radius:6px;cursor
 
       <!-- Cartel informativo -->
       <figure class="info-image">
