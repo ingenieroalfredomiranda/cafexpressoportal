@@ -110,10 +110,9 @@
     </div>
   </a>
 </figure>
-
 <figure>
   <a href="detalle.html">
-    <img src="casino.jpg" alt="Casino" class="responsive-img" />
+    <img src="dos_millones.jpg" alt="Dos millones" class="responsive-img" />
   </a>
   <figcaption class="thumb-caption">
     <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
@@ -125,6 +124,7 @@
     </p>
   </figcaption>
 </figure>
+
 
        <!-- Secciones ampliadas -->
 <section id="secciones-ampliadas">
