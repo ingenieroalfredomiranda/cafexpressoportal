@@ -1,4 +1,3 @@
-
 <!-- Hero -->
 <section class="hero" aria-labelledby="main-headline">
   <article class="hero-main">
@@ -14,6 +13,10 @@
       Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje
     </div>
 
+    <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
+      Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
+    </p>
+
     <!-- Portada principal -->
     <figure class="hero-image">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
@@ -26,6 +29,23 @@
     </figure>
   </article>
 </section>
+
+<!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
+<section aria-label="Captura principal">
+  <figure class="capture-test" aria-labelledby="captureTitle">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
+         alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
+         loading="lazy"
+         class="imagen-ajustada responsive-img">
+    <figcaption id="captureTitle" class="capture-caption">
+      <strong>Cómo ayudar</strong><br>
+      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
+      <br>
+      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
+    </figcaption>
+  </figure>
+</section>
+
 
 <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
 <section aria-label="Captura principal">
