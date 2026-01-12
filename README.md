@@ -47,7 +47,6 @@
 </section>
 
 
-
 <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
 <section aria-label="Captura principal">
   <figure class="capture-test" aria-labelledby="captureTitle">
