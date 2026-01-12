@@ -98,9 +98,22 @@
       <div class="overlay">
         <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
         <div class="credit">Caso clínico; Los Mochis</div>
+<figure class="testimonio" role="article" aria-labelledby="t2">
+  <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
+    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg"
+         loading="lazy"
+         alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón"
+         class="imagen-ajustada" />
+    <div class="overlay">
+      <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
+      <div class="credit">Caso clínico; Los Mochis</div>
+    </div>
+  </a>
+</figure>
+
 <figure>
   <a href="detalle.html">
-    <img src="casino.jpg" alt="Casino" class="responsive-img">
+    <img src="casino.jpg" alt="Casino" class="responsive-img" />
   </a>
   <figcaption class="thumb-caption">
     <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
@@ -112,14 +125,6 @@
     </p>
   </figcaption>
 </figure>
-
-    </p>
-  </figcaption>
-</figure>
-
-  </footer>
-</figure>
-
 
        <!-- Secciones ampliadas -->
 <section id="secciones-ampliadas">
