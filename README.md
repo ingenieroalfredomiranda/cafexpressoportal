@@ -5,43 +5,10 @@
     <h1 id="main-headline" class="headline">
       La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
     </h1>
-<!-- Banner superior -->
-<header class="banner-top" role="banner" aria-label="Identidad editorial Café Expreso Portal">
-  <img src="SYE42zHSdNZUm7nDDxnFe.jpeg"
-       alt="Logotipo de Café Expreso Portal: Reportajes, Información y Análisis"
-       class="banner-logo"
-       loading="lazy">
-</header>
 
-<style>
-  .banner-top {
-    width: 100%;
-    background-color: #fff;
-    padding: 8px 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .banner-logo {
-    max-height: 60px;   /* tamaño en escritorio */
-    height: auto;
-    width: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* Ajustes para pantallas pequeñas */
-  @media (max-width:480px){
-    .banner-top {
-      padding: 6px 12px;
-    }
-    .banner-logo {
-      max-height: 40px; /* más pequeño en celular */
-    }
-  }
-</style>
+    <div class="byline">
+      Por <strong>Café Expreso Portal</strong> — Investigación y reportaje
+    </div>
 
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
       Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
@@ -53,13 +20,14 @@
            alt="Portada principal: apuestas en Culiacán"
            class="imagen-ajustada responsive-img"
            loading="lazy"
-           style="width:100%;height:auto;display:block;object-fit:cover;max-width:100%;border-radius:6px;">
-      <figcaption class="hero-caption" 
+           style="width:100%;height:auto;display:block;object-fit:cover;max-width:100%;border-radius:6px;" />
+      <figcaption class="hero-caption"
                   style="position:absolute;bottom:0;left:0;width:100%;
                          background:rgba(0,0,0,0.7);color:#fff;padding:16px;
                          text-align:center;border-radius:0 0 6px 6px;">
         <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
-        </a>
+          La apuesta perdida — Culiacán en la ruina del juego
+        </div>
       </figcaption>
     </figure>
   </article>
@@ -71,29 +39,27 @@
     <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
          alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
          loading="lazy"
-         class="imagen-ajustada responsive-img">
+         class="imagen-ajustada responsive-img" />
     <figcaption id="captureTitle" class="capture-caption">
-      <strong>Cómo ayudar</strong><br>
-      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
-      <br>
-      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
+      <strong>Cómo ayudar</strong><br />
+      Se proponen campañas de prevención, regulación estricta de plataformas digitales,
+      programas de rehabilitación accesibles y transparencia en licencias.
+      <br />
+      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">
+        Acceder al test
+      </button>
     </figcaption>
   </figure>
 </section>
 
-
-   <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
-  Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
-</p>
-</article>
-
+<!-- Testimonio destacado -->
 <div class="testimonios" aria-label="Testimonios destacados">
   <figure class="testimonio" role="article" aria-labelledby="t1">
     <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg"
            loading="lazy"
            alt="Manos intercambiando un sobre con billetes; fondo nocturno con letreros de apuestas"
-           style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;">
+           style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;" />
     </a>
     <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
       <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
@@ -102,20 +68,14 @@
       <div style="font-size:16px;font-style:italic;margin-bottom:12px;">
         Las graves conductas de la ludopatía
       </div>
-      <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+      <a href="segunda-parte.html"
+         title="Haz click para seguir leyendo"
          style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
         Haz click para seguir leyendo »
       </a>
     </figcaption>
   </figure>
 </div>
-
-        </a>
-      </div>
-    </a>
-  </figure>
-</div>
-
 
   <div class="testimonios" aria-label="Testimonios destacados">
 
