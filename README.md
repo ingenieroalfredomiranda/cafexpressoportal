@@ -8,17 +8,17 @@
     <!-- Minimal metadata: only image reference -->
     <title></title>
 
-    <!-- Open Graph -->
+    <!-- Open Graph: solo referencia a la imagen -->
     <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
 
-    <!-- Twitter -->
+    <!-- Twitter: solo referencia a la imagen -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
 
-    <!-- Canonical (kept minimal) -->
+    <!-- Canonical (mantener la URL del sitio) -->
     <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressosportal/" />
 
-    <!-- Structured Data: only image -->
+    <!-- Structured Data: solo imagen -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -27,30 +27,26 @@
       }
     </script>
   </head>
-  <body>
 
+  <body>
+    <!-- Mostrar la imagen en la página como respaldo visual -->
+    <main style="display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+      <img
+        src="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png"
+        alt="Logo"
+        style="max-width:90%;height:auto;display:block;"
+      />
+    </main>
   </body>
 </html>
 
-<!-- End of minimal head -->
 
-<!-- Page intentionally minimal -->
-
-<!-- Image is referenced only in metadata -->
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=51ab0bafa6680ed18ba8703b2a05c6a3514c81b2" />
-
-    <!-- Estilos locales (temporal). Extrae esto a style.css en producción -->
-    <style>
-      :root {
-        --accent: #ff5252;
-        --muted: #6b6b6b;
-        --caption-bg: rgba(0,0,0,0.75);
-      }
-    </style>
   </head>
-   
+  <body>
+
+    <!-- Page content starts here -->
+
+  
       <!-- Hero -->
       <section class="hero" aria-labelledby="main-headline">
         <article class="hero-main">
