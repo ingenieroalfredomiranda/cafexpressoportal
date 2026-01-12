@@ -1,50 +1,111 @@
-<!DOCTYPE html>
-<html lang="es-MX">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Portal</title>
+  
+  <!-- SEO básico -->
+  <meta name="description" content="Periodismo local con identidad global">
+  <meta name="keywords" content="café, periodismo, local, noticias, análisis">
+  <meta name="author" content="Café Portal">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tusitio.com/">
+  
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Café Portal">
+  <meta property="og:title" content="Café Portal">
+  <meta property="og:description" content="Periodismo local con identidad global">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tusitio.com/">
+  <meta property="og:image" content="https://tusitio.com/cafe.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo Café Portal">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@CafePortal">
+  <meta name="twitter:creator" content="@CafePortal">
+  <meta name="twitter:title" content="Café Portal">
+  <meta name="twitter:description" content="Periodismo local con identidad global">
+  <meta name="twitter:image" content="https://tusitio.com/cafe.png">
+  <meta name="twitter:image:alt" content="Logo Café Portal">
+  
+  <!-- Favicon y iconos -->
+  <link rel="icon" href="https://tusitio.com/cafe.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://tusitio.com/cafe.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Idioma y compatibilidad -->
+  <meta http-equiv="Content-Language" content="es">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- Manifest (opcional) -->
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Canonical alternate language (si aplica) -->
+  <link rel="alternate" href="https://tusitio.com/" hreflang="es-mx">
+  
+  <!-- Preconnect para rendimiento -->
+  <link rel="preconnect" href="https://tusitio.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Tipografías y estilos básicos -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+  
+  <!-- Microdatos JSON-LD para organización -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "Café Portal",
+    "url": "https://tusitio.com/",
+    "logo": "https://tusitio.com/cafe.png",
+    "sameAs": [
+      "https://twitter.com/CafePortal",
+      "https://www.facebook.com/CafePortal"
+    ]
+  }
+  </script>
+  
+  <!-- Meta adicionales para control de caché y seguridad -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Scripts esenciales (defer) -->
+  <script src="/scripts/main.js" defer></script>
+  
+  <!-- Etiquetas de verificación (si las usas, reemplaza los valores) -->
+  <!-- <meta name="google-site-verification" content="tu_codigo_aqui"> -->
+  <!-- <meta name="msvalidate.01" content="tu_codigo_aqui"> -->
+  
+  <!-- Bloque de prueba mínimo (descomenta para pruebas rápidas) -->
+  <!--
+  <meta property="og:image" content="https://tusitio.com/cafe.png">
+  <meta name="twitter:image" content="https://tusitio.com/cafe.png">
+  -->
+  
+  <!-- Evita incluir otras imágenes en metadatos para que solo se use cafe.png -->
+  <!-- Asegúrate de que ninguna plantilla o CMS inyecte metadatos adicionales -->
+  
+  <!-- Estilos inline críticos (opcional) -->
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    /* estilos críticos mínimos */
+  </style>
+  
+  <!-- Notas finales y espacio reservado -->
+  <!-- Línea 103: revisa que cafe.png exista en la ruta indicada -->
+  <!-- Línea 104: elimina comentarios de verificación si no los usas -->
+  <!-- Línea 105: conserva este bloque como reemplazo completo -->
+  <!-- Fin del head personalizado para reemplazo -->
+</head>
 
-    <!-- Minimal metadata: only image reference -->
-    <title></title>
-
-    <!-- Open Graph: solo referencia a la imagen -->
-    <meta property="og:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
-
-    <!-- Twitter: solo referencia a la imagen -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png" />
-
-    <!-- Canonical (mantener la URL del sitio) -->
-    <link rel="canonical" href="https://ingenieroalfredomiranda.github.io/cafexpressosportal/" />
-
-    <!-- Structured Data: solo imagen -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "image": "https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png"
-      }
-    </script>
-  </head>
-
-  <body>
-    <!-- Mostrar la imagen en la página como respaldo visual -->
-    <main style="display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
-      <img
-        src="https://ingenieroalfredomiranda.github.io/cafexpressosportal/cafe.png"
-        alt="Logo"
-        style="max-width:90%;height:auto;display:block;"
-      />
-    </main>
-  </body>
-</html>
-
-
-  </head>
-  <body>
-
-    <!-- Page content starts here -->
 
   
       <!-- Hero -->
