@@ -95,7 +95,7 @@
       <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
         "Puse en riesgo hasta mi vida por  la adicción al casino"  testimonio real 
       </div>
-      <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+      <a href="segunda-parte.html" title="Haz click para seguir leyendo" 
          style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
         Haz click para seguir leyendo »
       </a>
