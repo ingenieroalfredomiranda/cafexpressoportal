@@ -5,12 +5,9 @@
     <h1 id="main-headline" class="headline">
       La ludopatía en Culiacán: una adicción silenciosa que devora vidas y dinero
     </h1>
-    <p class="standfirst">
-      Entre maquinitas en colonias populares, plataformas digitales y casinos con permisos ambiguos, la adicción al juego se ha convertido en un problema de salud pública y seguridad financiera. Este reportaje cruza testimonios, datos institucionales y documentos en trámite para mostrar la magnitud del daño.
-    </p>
 
     <div class="byline">
-      Por <strong>Miguel Alfredo Miranda Félix</strong> — Investigación y reportaje
+      Por <strong>Cafe Expreso Portal</strong> — Investigación y reportaje
     </div>
 
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
@@ -18,17 +15,34 @@
     </p>
 
     <!-- Portada principal -->
-    <figure class="hero-image">
+    <figure class="hero-image" style="position:relative;">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
            alt="Portada principal: apuestas en Culiacán"
            class="imagen-ajustada responsive-img"
-           loading="lazy">
-      <figcaption class="hero-caption">
-        Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.
+           loading="lazy"
+           style="width:100%;height:auto;display:block;object-fit:cover;max-width:100%;border-radius:6px;">
+      <figcaption class="hero-caption" 
+                  style="position:absolute;bottom:0;left:0;width:100%;
+                         background:rgba(0,0,0,0.7);color:#fff;padding:16px;
+                         text-align:center;border-radius:0 0 6px 6px;">
+        <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
+          La apuesta perdida: Culiacán atrapado en la ruina del juego
+        </div>
+        <div style="font-size:16px;font-style:italic;line-height:1.4;">
+          Una adicción silenciosa que devora vidas y bolsillos
+        </div>
+        <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+           style="display:inline-block;margin-top:12px;padding:8px 14px;
+                  background-color:#e53935;color:#fff;font-weight:bold;
+                  font-size:14px;text-decoration:none;border-radius:4px;
+                  transition:background-color 0.3s ease,transform 0.2s ease;">
+          Haz click para seguir leyendo »
+        </a>
       </figcaption>
     </figure>
   </article>
 </section>
+
 <!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
 <section aria-label="Captura principal">
   <figure class="capture-test" aria-labelledby="captureTitle">
