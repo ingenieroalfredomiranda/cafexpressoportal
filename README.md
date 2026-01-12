@@ -81,28 +81,49 @@
 </div>
 
 
+  <div class="testimonios" aria-label="Testimonios destacados">
+
+  <!-- Testimonio t2 -->
   <figure class="testimonio" role="article" aria-labelledby="t2">
     <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg"
            loading="lazy"
            alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón"
-           class="imagen-ajustada">
-      <div class="overlay">
-        <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
-<figure class="testimonio" role="article" aria-labelledby="t3">
-  <a href="detalle.html" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
-    <img src="dosmillones.png" alt="Dos millones" class="imagen-ajustada responsive-img">
-  </a>
-  <figcaption class="thumb-caption">
-    <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
-    <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">
-      ¿Me afecta?
-    </button>
-    <p class="image-footer">
-      Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
-    </p>
-  </figcaption>
-</figure>
+           style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;">
+    </a>
+    <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
+      <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
+        “El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”  
+        Historia de la joven que perdió todo por la adicción al casino
+      </div>
+      <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+         style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
+        Haz click para seguir leyendo »
+      </a>
+    </figcaption>
+  </figure>
+
+  <!-- Testimonio t3 -->
+  <figure class="testimonio" role="article" aria-labelledby="t3">
+    <a href="detalle.html" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
+      <img src="dosmillones.png"
+           alt="Dos millones"
+           style="width:100%;height:auto;display:block;object-fit:contain;max-width:100%;border-radius:6px;">
+    </a>
+    <figcaption style="background:rgba(0,0,0,0.75);color:#fff;padding:16px;border-radius:0 0 6px 6px;text-align:center;">
+      <div style="font-size:22px;font-weight:bold;color:#ff5252;margin-bottom:8px;">
+        Pérdida económica: Perdí más de dos millones de pesos en apuestas, un recordatorio del impacto real
+      </div>
+      <a href="segunda-parte.html" title="Haz click para seguir leyendo"
+         style="display:inline-block;padding:8px 14px;background-color:#e53935;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;border-radius:4px;transition:background-color 0.3s ease,transform 0.2s ease;">
+        Haz click para seguir leyendo »
+      
+      </a>
+    </figcaption>
+  </figure>
+
+</div>
+
 
 
        <!-- Secciones ampliadas -->
