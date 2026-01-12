@@ -11,66 +11,7 @@
     <p class="summary" style="color:var(--muted);font-size:13.5px;margin-top:6px;">
       Resumen: Este reportaje documenta factores de riesgo, trayectorias clínicas, impacto económico y vínculos con lavado de dinero en Sinaloa. Incluye testimonios, solicitudes de información y propuestas de política pública.
     </p>
-  </article>
-
-<aside class="side" aria-label="Portada y destacados">
-  <figure class="hero-image">
-    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas.jpg"
-         alt="Mano contando billetes; fondo nocturno con letreros de apuestas y silueta de espaldas"
-         loading="lazy"
-         class="imagen-ajustada">
-    <figcaption class="hero-caption">
-      Portada: Maquinitas y minicasinos en colonias populares; la accesibilidad alimenta la adicción.
-    </figcaption>
-  </figure>
-</aside>
-
-
-    <div class="card">
-      <h4>Hallazgos clave</h4>
-      <p>La investigación identifica: normalización del juego entre jóvenes; vacíos regulatorios; 13 casinos vinculados a operaciones sospechosas; y testimonios de prostitución y delitos para financiar apuestas.</p>
-    </div>
-
-    <div class="card">
-      <h4>Cómo ayudar</h4>
-      <p>Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.</p>
-    </div>
-  </aside>
-</section>
-
-<!-- Bloque: imagen de ayuda + botón para abrir el cuestionario -->
-<section aria-label="Captura principal">
-  <figure class="capture-test" aria-labelledby="captureTitle">
-    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/ayuda.jpg"
-         alt="Cómo ayudar: campañas de prevención, regulación y programas de rehabilitación"
-         loading="lazy"
-         class="imagen-ajustada">
-    <figcaption id="captureTitle" class="capture-caption">
-      <strong>Cómo ayudar</strong><br>
-      Se proponen campañas de prevención, regulación estricta de plataformas digitales, programas de rehabilitación accesibles y transparencia en licencias.
-      <br>
-      <button id="openQuiz" class="btn-access-test" aria-haspopup="dialog" aria-controls="quizModal">Acceder al test</button>
-    </figcaption>
-  </figure>
-</section>
-
-
-<!-- Article body -->
-<main class="article" role="main" id="main-content">
-  <section class="article-main">
-    <h2>Contexto: de entretenimiento a dependencia</h2>
-    <p>La ludopatía, o trastorno por juego, es una adicción sin sustancia que afecta a miles de personas en México. En Culiacán, la proliferación de casinos, minicasinos y plataformas digitales ha facilitado el acceso al juego, especialmente entre adolescentes y jóvenes universitarios.</p>
-
-    <div class="pull-quote">“La ludopatía es un asesino silencioso que te lleva a la cárcel, a la locura o a la muerte.” — Testimonio recogido en Culiacán</div>
-
-    <h2 id="testimonios">Testimonios que atrapan</h2>
-    <!-- Aquí continúa el contenido de testimonios -->
-  </section>
-</main>
-
-   <h2 id="testimonios">Testimonios que atrapan</h2>
-
-<div class="testimonios" aria-label="Testimonios destacados">
+  </article<div class="testimonios" aria-label="Testimonios destacados">
   <figure class="testimonio" role="article" aria-labelledby="t1">
     <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social" aria-controls="detalle-impacto-social">
       <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/apuestas_supervivencia.jpg"
@@ -98,33 +39,29 @@
       <div class="overlay">
         <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
         <div class="credit">Caso clínico; Los Mochis</div>
-<figure class="testimonio" role="article" aria-labelledby="t2">
-  <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano" aria-controls="detalle-toque-humano">
-    <img src="https://ingenieroalfredomiranda.github.io/cafexpressoportal/casino_mentira_espejo.jpg"
-         loading="lazy"
-         alt="Mesa con fichas y billetes; espejo agrietado que refleja luces de neón"
-         class="imagen-ajustada" />
-    <div class="overlay">
-      <div class="quote">“El casino es una mentira: no se hizo para perder, sino para que los dueños ganen.”</div>
-      <div class="credit">Caso clínico; Los Mochis</div>
-    </div>
-  </a>
-</figure>
-<figure>
-  <a href="detalle.html">
-    <img src="dos_millones.jpg" alt="Dos millones" class="responsive-img" />
-  </a>
-  <figcaption class="thumb-caption">
-    <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
-    <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">
-      ¿Me afecta?
-    </button>
-    <p class="image-footer">
-      Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
-    </p>
-  </figcaption>
-</figure>
+      </div>
+    </a>
+    <figcaption class="thumb-caption">
+      <strong>Toque humano:</strong> un recordatorio de cómo la percepción del juego afecta la vida cotidiana.
+      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">¿Me afecta?</button>
+    </figcaption>
+  </figure>
 
+  <figure class="testimonio" role="article" aria-labelledby="t3">
+    <a href="detalle.html" title="Abrir testimonio: Pérdida económica" aria-controls="detalle-perdida-economica">
+      <img src="dosmillones.jpg" alt="Dos millones" class="responsive-img" />
+    </a>
+    <figcaption class="thumb-caption">
+      <strong>Pérdida económica:</strong> el rastro tangible del endeudamiento y la venta de bienes.
+      <button class="quiz-open" data-quiz="screening" aria-haspopup="dialog" aria-controls="quizModal">
+        ¿Me afecta?
+      </button>
+      <p class="image-footer">
+        Pérdida de más de dos millones de pesos en apuestas: un recordatorio del impacto real.
+      </p>
+    </figcaption>
+  </figure>
+</div>
 
        <!-- Secciones ampliadas -->
 <section id="secciones-ampliadas">
