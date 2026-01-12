@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,6 @@
 
     <link rel="stylesheet" href="/cafexpressoportal/assets/css/style.css?v=ab4674ef2b505aee2d39e04b4196ba94d95b540e" />
 
-    <!-- Estilos añadidos: mover reglas inline a clases, tipografía responsiva y estilos de botones -->
     <style>
       :root {
         --accent: #ff5252;
@@ -34,7 +33,6 @@
 
       .container-lg { max-width: 980px; margin: 0 auto; }
 
-      /* Imágenes */
       .imagen-ajustada,
       .responsive-img {
         width: 100%;
@@ -45,7 +43,6 @@
         max-width: 100%;
       }
 
-      /* Hero / figuras con overlay */
       .hero-image,
       .info-image,
       .capture-test,
@@ -104,7 +101,6 @@
         margin-top: 10px;
       }
 
-      /* Info image caption (no overlay) */
       .info-caption {
         position: static;
         background: transparent;
@@ -124,7 +120,6 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
       }
 
-      /* Botones */
       .btn-access-test {
         background: var(--accent);
         color: #fff;
@@ -143,13 +138,11 @@
         outline: none;
       }
 
-      /* Utilidades y texto */
       .kicker { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
       .headline { font-size: clamp(20px, 3.5vw, 28px); margin: 6px 0 12px 0; }
       .byline { font-size: 14px; color: #333; margin-bottom: 8px; }
       .summary { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
 
-      /* Testimonios: normalizar imagen y caption (overlay) */
       .testimonio img { object-fit: contain; }
       .testimonio figcaption {
         background: rgba(0,0,0,0.75);
@@ -271,7 +264,6 @@
 
       <!-- Testimonios -->
       <div class="testimonios" aria-label="Testimonios destacados">
-        <!-- Testimonio t1 -->
         <figure class="testimonio" role="article" aria-labelledby="t1">
           <a href="#detalle-impacto-social" title="Abrir testimonio: Impacto social">
             <img
@@ -288,7 +280,6 @@
           </figcaption>
         </figure>
 
-        <!-- Testimonio t2 -->
         <figure class="testimonio" role="article" aria-labelledby="t2">
           <a href="#detalle-toque-humano" title="Abrir testimonio: Toque humano">
             <img
@@ -304,7 +295,6 @@
           </figcaption>
         </figure>
 
-        <!-- Testimonio t3 -->
         <figure class="testimonio" role="article" aria-labelledby="t3">
           <a href="detalle.html" title="Abrir testimonio: Pérdida económica">
             <img
@@ -326,7 +316,6 @@
     <!-- Nota: los botones con aria-controls deben enlazar a modales implementados en tu JS; aquí solo están los elementos HTML -->
   </body>
 </html>
-
 
 
        <!-- Secciones ampliadas -->
